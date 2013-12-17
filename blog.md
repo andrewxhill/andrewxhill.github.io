@@ -1,6 +1,6 @@
 ---
 layout: post-index
-permalink: /blog/
+permalink: /articles/
 title: Blog
 tagline: My articles
 tags: [blog, writing, work]

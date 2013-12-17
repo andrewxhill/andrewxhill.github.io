@@ -2,7 +2,7 @@ title:            Andrewxhill
 tagline:          The work of Andrew Hill
 description:      A place for me to collect things I've done and post things I write.
 # Your site's domain goes here. Leave localhost server or blank when working locally.
-url:              http://andrewxhill.com
+url:              
 
 # Owner/author information
 owner:
@@ -37,7 +37,7 @@ links:
   - title: About
     url: /about/
   - title: Blog
-    url: /blog/
+    url: /articles/
   - title: Work
     url: /projects/
   # - title: Made Mistakes
