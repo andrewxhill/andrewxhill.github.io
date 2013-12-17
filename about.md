@@ -1,29 +1,20 @@
 ---
 layout: page
 permalink: /about/index.html
-title: About the Theme
-tagline: Minimal Mistakes, a Jekyll Theme
-tags: [about, Jekyll, theme, responsive]
-modified: 9-9-2013
+title: About Me
+tagline: Andrew Hill, biologist, mapper, data scientist, storyteller
+tags: [about, Andrew Hill, storytelling, maps]
+modified: 12-15-2013
 image:
-  feature: texture-feature-02.jpg
-  credit: Texture Lovers
-  creditlink: http://texturelovers.com
+  feature: index-banner.jpg
 ---
 
-Jekyll is pretty rad and figured releasing a cleaned up version of [my site](http://mademistakes.com)[^1] as a theme for others to hack and build on would be fun. So here be that theme --- I call it **Minimal Mistakes**, a responsive Jekyll theme with large featured images and solid typography. 
+Andrew is thinker and tinkerer living in Brooklyn. He works at [Vizzuality](http://vizzuality.com) and [CartoDB](http://cartodb.com) where he thinks about the future of maps. He has an obsession with storytelling, give him a few beers and you'll have a hard time getting him to shut-up. He also tries to apply that interest to data science, thinking about how we can communicate and explore data better through the use of storytelling. In his current position, he can regularly be found trying to create interesting maps online or giving workshops and presentations, often in New York City. Andrew is originally from New Hampshire, received his PhD in Biology at the University of Colorado, Boulder, and has lived in New York since 2011. 
 
-## Minimal Mistakes is all about:
+## Questions
 
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 8+ and all modern browsers. 
-* Minimal embellishments --- content first.
-* Large feature images for posts and pages.
-* Author sidebar to pimp your bio, photo[^2], and social media links.
-* Simple and clear permalink structure *(ie: domain.com/category/post-title)*
+<a markdown="0" href="https://twitter.com/andrewxhill" class="btn">Twitter</a>
+<a markdown="0" href="mailto:andrewxhill@gmail.com" class="btn">Email</a>
+<a markdown="0" href="http://www.linkedin.com/profile/view?id=192810399" class="btn">LinkedIn</a>
 
-<a markdown="0" href="{{ site.url }}/theme-setup" class="btn">Install Minimal Mistakes Theme</a>
-
-[^1]: Since open sourcing this theme I have released a couple other Jekyll themes. My website [Made Mistakes](http://mademistakes.com) is currently using a modified version of my [So Simple Theme](http://mmistakes.github.io/so-simple-theme/).
-
-[^2]: Fancy avatars provided by [Brandon Mathis](http://brandonmathis.com/projects/fancy-avatars/demo/) under a [Creative Commons Attribution 3.0 License](http://creativecommons.org/licenses/by/3.0/).
+Need more? See my [Full CV]({{ site.url }}/assets/files/curriculum_vitae.pdf)
