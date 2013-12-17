@@ -3,7 +3,7 @@ layout: post
 title: First post of the decade
 description: "By getting a personal website launched I plan to join the 21st century by early 2014."
 modified: 2013-12-16
-category: articles
+category: blog
 tags: [intro, beginner, jekyll, tutorial]
 image:
   feature: posts/intro-post-banner.jpg
