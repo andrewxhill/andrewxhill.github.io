@@ -45,3 +45,9 @@ This weekend I was looking through [Project Gutenberg](http://gutenberg.org) and
 </p>
 </div>
 
+### About the map
+
+Use the menu to select each published work by Mark Twain or look at them as a whole. You can also toggle between the line map and an interactive point map that will give you links to the passages.
+
+I built the map using [CartoDB](http://cartodb.com) and all data came from [Project Gutenberg](http://gutenberg.org). If you want to start making your own maps, CartoDB is free to try and I've made a bunch of [tutorials for you to get started](http://developers.cartodb.com/tutorials.html). 
+
