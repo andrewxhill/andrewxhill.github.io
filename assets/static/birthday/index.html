@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link href="http://fonts.googleapis.com/css?family=Abril+Fatface:400" rel="stylesheet" type="text/css">
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<title>Full Page Background Image | Progressive</title>
+	
+	<style>
+
+
+@font-face {
+	font-family: Museo;
+	src: url("Museo300-Regular.otf") format("opentype");
+}
+
+@font-face {
+	font-family: League-Gothic;
+	src: url("League-Gothic.otf") format("opentype");
+}
+	html { 
+  background: url(yearbook.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family:  "Abril Fatface"
+}
+	div {
+		font-size: 45px;
+		color: neonyellow;
+		padding: 10px;
+	}
+
+	div.date {
+		background: black;
+		position: absolute;
+		top: 90px;
+		left: -100px;
+		background: black;
+		width: 450px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -moz-transform:rotate(-45deg);
+	}
+
+	div.birthday{
+		background: black;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		background: rgba(0,0,0,0.7);
+		width: 80%;
+		padding: 5px 10% 15px 10%;
+		font-size: 22px;
+	}
+	div.birthday span {
+		position: relative;
+		float: left;
+		width: 100%;
+	}
+	div.birthday span a{
+		text-decoration: none;
+		color: #fff;
+		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #de00ff, 0 0 70px #de00ff, 0 0 80px #de00ff, 0 0 100px #de00ff, 0 0 150px #de00ff;
+	}
+	div.birthday span a:visited{
+		text-decoration: none;
+		color: #fff;
+		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #de00ff, 0 0 70px #de00ff, 0 0 80px #de00ff, 0 0 100px #de00ff, 0 0 150px #de00ff;
+	}
+
+
+	.neon  {
+		text-align: center;
+		font-family: "Museo";
+		text-transform: uppercase;
+		color: #fff;
+		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #de00ff, 0 0 70px #de00ff, 0 0 80px #de00ff, 0 0 100px #de00ff, 0 0 150px #de00ff;
+	}
+
+
+	</style>
+</head>
+
+<body>
+
+	<div class="birthday neon">
+		<span>BIRTHDAY BBQ PARTY - 169 HALSEY ST, 2R - 4PM to 12AM</span>
+		<span>10AM MORNING SURF @ 67th STREET(DEP. CONDITIONS)</span>
+		<span>SURFBOARDS TO LOAN</span>
+		<span><a href="https://www.google.com/maps/search/169+halsey+street,+brooklyn+ny/@40.682343,-73.946794,17z" target="_blank">MAP</a>   |   <a href="birthday.png" class="rsvp"> RSVP</a></span>
+	</div>
+	<div class="date neon">
+	  <span class="day">9</span> 
+	  <span class="month">August</span> 
+	  <span class="year">2014</span>
+	</div>
+	<script type="text/javascript">
+
+  </script>
+</body>
+
+</html>
