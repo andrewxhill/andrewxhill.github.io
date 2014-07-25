@@ -6,6 +6,7 @@
 	<meta charset="UTF-8">
 	<link href="http://fonts.googleapis.com/css?family=Abril+Fatface:400" rel="stylesheet" type="text/css">
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
 	<title>Full Page Background Image | Progressive</title>
 	
 	<style>
@@ -21,15 +22,24 @@
 	src: url("League-Gothic.otf") format("opentype");
 }
 	html { 
-  background: url(yearbook.jpg) no-repeat center center fixed; 
-  background-size: cover;
+  /*background: url(yearbook.jpg) no-repeat center center fixed  !important; */
+
+   background : transparent url(yearbook.jpg) no-repeat center center;
+
+    min-height:100%;
+
+    background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   font-family:  "Abril Fatface"
 }
+body{
+    /* Workaround for some mobile browsers */
+    min-height:100%;
+}
 	div {
-		font-size: 45px;
+		font-size: large;
 		color: neonyellow;
 		padding: 10px;
 	}
@@ -41,10 +51,46 @@
 		left: -100px;
 		background: black;
 		width: 450px;
+		font-size: 2.5em;
         transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
         -moz-transform:rotate(-45deg);
 	}
+
+	div.date span {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+	}
+
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
 
 	div.birthday{
 		background: black;
@@ -54,7 +100,7 @@
 		background: rgba(0,0,0,0.7);
 		width: 80%;
 		padding: 5px 10% 15px 10%;
-		font-size: 22px;
+		font-size: 1.3em;
 	}
 	div.birthday span {
 		position: relative;
