@@ -17,4 +17,4 @@ Andrew is thinker and tinkerer living in Brooklyn. He works at [Vizzuality](http
 <a markdown="0" href="mailto:andrewxhill@gmail.com" class="btn">Email</a>
 <a markdown="0" href="http://www.linkedin.com/profile/view?id=192810399" class="btn">LinkedIn</a>
 
-Need more? See my [Full CV]({{ site.url }}/assets/files/curriculum_vitae.pdf)
+Need more? See my [Full CV](https://dl.dropboxusercontent.com/u/1307405/curriculum%20vitae.pdf)
