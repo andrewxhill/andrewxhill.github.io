@@ -72,7 +72,7 @@ Some things that I have created or have helped to create.
 
 ## More
 
-If you are still curious about the things I do, see my [Full CV]({{ site.url }}/assets/files/curriculum_vitae.pdf). If you want to know more about CartoDB, checkout the [website](https://cartodb.com/) and [blog](http://blog.cartodb.com/)
+If you are still curious about the things I do, see my [Full CV](https://dl.dropboxusercontent.com/u/1307405/curriculum%20vitae.pdf). If you want to know more about CartoDB, checkout the [website](https://cartodb.com/) and [blog](http://blog.cartodb.com/)
 
 
 
