@@ -45,6 +45,13 @@ Some things that I have created or have helped to create.
   <figcaption>If you want to hear me talk about my ideas having to do with storytelling, the future of mapping, or developing an open source mapping tool, <a href="mailto:andrewxhill@gmail.com">click here to get in touch</a>. See some videos below.</figcaption>
 </figure>
 
+## Interviews
+
+1. O'Reilly - [Video interview about mapping and CartoDB ](https://www.youtube.com/watch?v=utKTsMVAWPs&list=PL055Epbe6d5Y8_iZPo7pH3hOnAtchMCJt&index=54)
+1. GeoHipster - [What are the limitations of what we call a map?](http://geohipster.com/2014/03/17/andrew-hill-limitations-call-map/)
+1. Interhacktives - [Interview with Andrew Hill data scientist at CartoDB](http://www.interhacktives.com/2014/01/17/interview-with-andrew-hill-of-cartodb/)
+1. Open Steps - [Mapping Open Data with CartoDB @ Madrid/New York, Spain/USA](http://www.open-steps.org/mapping-open-data-with-cartodb-madridnew-york-spainusa/) 
+
 ## Events
 
 <figure class="third">
@@ -64,12 +71,6 @@ Some things that I have created or have helped to create.
 1. Gizmodo - [See NYC From a New Angle With These Awesomely Nerdy Maps](http://gizmodo.com/see-nyc-from-a-new-angle-with-these-awesomely-nerdy-map-1093545954) 
 1. Gothamist - [Geek Out With Awesome Digital Maps Created From NYC Tax Data](http://gothamist.com/2013/08/10/geek_out_with_awesome_digital_maps.php) 
 1. Wired MapLab - [New York’s Mapping Elite Drool Over Newly Released Tax Lot Data](http://www.wired.com/wiredscience/2013/08/nyc-pluto-data-map-party/) 
-
-## Interviews
-
-1. O'Reilly - [Video interview about mapping and CartoDB ](https://www.youtube.com/watch?v=utKTsMVAWPs&list=PL055Epbe6d5Y8_iZPo7pH3hOnAtchMCJt&index=54)
-1. Interhacktives - [Interview with Andrew Hill data scientist at CartoDB](http://www.interhacktives.com/2014/01/17/interview-with-andrew-hill-of-cartodb/)
-1. Open Steps - [Mapping Open Data with CartoDB @ Madrid/New York, Spain/USA](http://www.open-steps.org/mapping-open-data-with-cartodb-madridnew-york-spainusa/) 
 
 ## More
 
