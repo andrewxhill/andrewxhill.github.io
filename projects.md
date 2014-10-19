@@ -42,7 +42,7 @@ Some things that I have created or have helped to create.
 
 <figure>
   <a href="http://vimeopro.com/openstreetmapus/state-of-the-map-us-2013/video/68096664" title="Andrew Hill talks about the development of NYC Henge on CartoDB"><img src="/images/work-samples/speaking.png"></a>
-  <figcaption>If you want to hear me talk about my ideas having to do with storytelling, the future of mapping, or developing an open source mapping tool, <a href="mailto:andrewxhill@gmail.com">click here to get in touch</a>.</figcaption>
+  <figcaption>If you want to hear me talk about my ideas having to do with storytelling, the future of mapping, or developing an open source mapping tool, <a href="mailto:andrewxhill@gmail.com">click here to get in touch</a>. See some videos below.</figcaption>
 </figure>
 
 ## Events
@@ -67,6 +67,7 @@ Some things that I have created or have helped to create.
 
 ## Interviews
 
+1. O'Reilly - [Video interview about mapping and CartoDB ](https://www.youtube.com/watch?v=utKTsMVAWPs&list=PL055Epbe6d5Y8_iZPo7pH3hOnAtchMCJt&index=54)
 1. Interhacktives - [Interview with Andrew Hill data scientist at CartoDB](http://www.interhacktives.com/2014/01/17/interview-with-andrew-hill-of-cartodb/)
 1. Open Steps - [Mapping Open Data with CartoDB @ Madrid/New York, Spain/USA](http://www.open-steps.org/mapping-open-data-with-cartodb-madridnew-york-spainusa/) 
 
