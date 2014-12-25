@@ -22,6 +22,10 @@ Some things that I have created or have helped to create.
 
 ## Maps
 
+<figure>
+  <a href="http://www.fastcodesign.com/3039535/gorgeous-visualization-shows-americas-rivers-in-a-new-light" title="Visualization Turns America's Rivers Into A Gorgeous Rainbow"><img src="/images/work-samples/rivers.png"></a>
+</figure>
+
 <figure class="third">
   <a href="http://nychenge.com/" title="NYCHenge: Interactive map to find beautiful sunsets in New York City"><img src="/images/work-samples/nychenge.png"></a>
   <a title="A digital tour of one of NYC most anticipated open data additions" href="http://andrewxhill.github.io/cartodb-examples/scroll-story/pluto/index.html"><img src="/images/work-samples/plutotour.png"></a>
