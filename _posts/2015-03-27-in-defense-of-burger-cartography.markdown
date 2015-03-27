@@ -19,9 +19,9 @@ I think the hardest thing about cartography is that people often get self-refern
 
 Like many other fields, the cartography thing is changing fast. I like to point out how many other non-scientific and scientific fields have many times in their history gotten stuck in local optima. Dogma sets in, the optima sticks around as _almost laws_, and then some Indiana Joneseque hero comes in and shows that there is a taller mountain through the clouds. Entire fields change their text books, and the history of mistakes is sorta forgotten. 
 
-The dogma of cartography is certain to be overturned by new discoveries, preferences, and norms. This is the second most exciting part about cartography, the bariers to engaging with the practice have recently been lowered past a threshold that a casual cartographer can now explore outside the bounds of comfort.
+The dogma of cartography is certain to be overturned by new discoveries, preferences, and norms from now until forever. This is the second most exciting part about cartography, the bariers to engaging with the practice have recently been lowered to such a low threshold that a casual cartographer can now explore outside the bounds of comfort for traditional cartography. My bet is that the next Indiana Joneses and Katniss Everdeens come from that group of map makers. 
 
-## In practice on CartoDB
+## Some early indicators at CartoDB
 
 I was an early skeptic of [Twitter Maps](http://blog.cartodb.com/twitter-maps/) on CartoDB. I was pretty vocal that we needed to find ways to automate normalization, study the effects of color composition in animations, etc. We actually started work on some of these and I think that the outputs will be some new and interested ways to deal with animation on maps. Externally too, a lot of interesting analyses have been [have been made](http://www.floatingsheep.org/2014/08/mapping-ferguson-tweets-or-more-maps.html) to help us think about the problem. I love it, that rush to understand something new. 
 
