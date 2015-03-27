@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "In defense of Burger Cartography"
-subtitle: "Or, get ready to fall in love with maps again."
+subtitle: "Or, you better fall in love with maps all over again."
 modified: 2015-03-27
 category: blog
 tags: [cartography, drunk]
