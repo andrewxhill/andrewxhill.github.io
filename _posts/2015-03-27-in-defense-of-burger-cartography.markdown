@@ -11,7 +11,7 @@ draft: true
 
 ## The future of cartography wont be defined by you
 
-The origin of CartoDB is a curious story, but it can be summed up nicely as a collective of environmentalists, technolgists, and designers decided that maps shouldn't be made hard by companies that wanted to charge you to make them easy. I've worked at CartoDB since the beginning, which has been, to say the least, a trip. One thing that I've learned, is that I will never learn enough. Noplace is this lesson more apparent than in cartography.
+The origin of CartoDB is a curious story, but it can be summed up nicely as _a collective of environmentalists, technolgists, and designers that decided maps shouldn't remain difficult to create just because old school software hadn't been brought up to speed with modern technology_. I've worked at CartoDB since the beginning, which has been, to say the least, a trip. One thing that I've learned, is that I will never learn enough. Or to say it another way, I never know quite what I'm talking about because what I'm seeing has never been talked about before. Nowhere is this lesson more apparent than in cartography.
 
 ## Goodbye old world
 
