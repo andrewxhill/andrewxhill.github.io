@@ -27,13 +27,13 @@ I was an early skeptic of [Twitter Maps](http://blog.cartodb.com/twitter-maps/) 
 
 A more recent story has provided a more critical but [pretty uniformative](http://www.citylab.com/housing/2015/03/why-most-twitter-maps-cant-be-trusted/388586/) review of Twitter maps. This prompted me to finally write this blog down. It has been in my mind a lot recently. Even in my recent talk at [FOSS4G-NA](https://2015.foss4g-na.org/session/what-map) I devoted some time to explain the rapid shift to flat design on the web and on mobile in a matter of months, thinking about that in the context of cartography. Cartography is more than just design, so I also devoted some time looking at the real intent and outcome of the Twitter map makers (among other CartoDB users producing curious new maps). In the end, I've changed my mind completely. I think the Twitter maps are spot-on and achieve their objective better than you can imagine. 
 
-Welcome on board journey for the new world of cartography, your old world criticism has missed the boat.
+Welcome on board the journey for the new world of cartography, your old world criticism has missed the boat.
 
 <iframe src="//giphy.com/embed/3zBmNY3YOBbDG" width="480" height="270" frameBorder="0" style="max-width: 100%" class="giphy-embed" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
 ## Why?
 
-I've thought a lot about this question actually. Let's back up and look at Twitter in the World Cup. Here are some slides from recent talks of mine.
+I've thought a lot about this question actually. Let's back up and look at Twitter in the World Cup. Here are a couple of graphics and quotes Twitter published and I've used in recent talks of mine.
 
 ![worldcup](/img/posts/cartography/world-cup.png)
 
