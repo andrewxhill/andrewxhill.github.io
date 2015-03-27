@@ -6,7 +6,6 @@ modified: 2013-12-17
 category: blog
 tags: [me]
 header-img: "img/posts/intro-post-banner.jpg"
-draft: true
 ---
 
 ## It's been a while

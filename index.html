@@ -4,6 +4,7 @@ description: "it might have been something I said"
 ---
 
 {% for post in paginator.posts %}
+  {% unless post.draft %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
@@ -17,6 +18,7 @@ description: "it might have been something I said"
     <p class="post-meta">Posted by {{ post.author }} on {{ post.date | date: "%B %-d, %Y" }}</p>
 </div>
 <hr>
+  {% endunless %}
 {% endfor %}
 
 <!-- Pager -->
