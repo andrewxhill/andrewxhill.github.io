@@ -15,9 +15,11 @@ The origin of CartoDB is a curious story, but it can be summed up nicely as _a c
 
 ## Goodbye old world
 
-I think the hardest thing about cartography is the community is often dogmatic about the "laws" of cartography. From what I know though, cartography is a field that is nowhere near a science. The most exciting thing about cartography is that it is a weird mixing pot of cognitive science, storytelling, design, and probably 5 other field that I'm too drunk to remember. 
+I think the hardest thing about cartography is that people often get self-referncially dogmatic about some previously decided laws of cartography. "Rainbow maps are evil", "Normalization or off to the gallows", "Colorbrewer or it didn't happen!". From what I know though, cartography is a field that is nowhere near a science. The most exciting thing about cartography is that it is an interesting mixing pot of cognitive science, geography, politics, storytelling, design, and probably 5 other field that I'm too drunk to remember. 
 
-Thing are changing fast though. I like to point at that non-scientific and scientific academia have a long history of getting stuck at local optima. The dogma of cartography is certain to be overturned by new discoveries, preferences, and norms. This is the second most exciting part about cartography, the bariers to engaging with the practice have recently been lowered past a threshold that a casual cartographer can now explore outside the bounds of comfort.
+Like many other fields, the cartography thing is changing fast. I like to point out how many other non-scientific and scientific fields have many times in their history gotten stuck in local optima. Dogma sets in, the optima sticks around as _almost laws_, and then some Indiana Joneseque hero comes in and shows that there is a taller mountain through the clouds. Entire fields change their text books, and the history of mistakes is sorta forgotten. 
+
+The dogma of cartography is certain to be overturned by new discoveries, preferences, and norms. This is the second most exciting part about cartography, the bariers to engaging with the practice have recently been lowered past a threshold that a casual cartographer can now explore outside the bounds of comfort.
 
 ## In practice on CartoDB
 
