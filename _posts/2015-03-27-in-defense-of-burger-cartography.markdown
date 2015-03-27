@@ -5,7 +5,7 @@ subtitle: "Or, get ready to fall in love with maps again."
 modified: 2015-03-27
 category: blog
 tags: [cartography, drunk]
-header-img: "img/posts/science-policy.jpg"
+header-img: "img/posts/cartography/header.png"
 draft: true
 ---
 
@@ -60,5 +60,4 @@ So what is _burger cartography_? It is what I'm going to start calling this expl
 I'm sure that some people saw my tweet and were like, "Oh ziing, good one! Use markers and proper color composition or get off the map!". But the tweet was genuine love for this map. It tickles me and makes me really think a lot about what playful cartography will do next. I'm ready to learn.
 
 Get ready to fall in love with cartography all over again!
-
 
