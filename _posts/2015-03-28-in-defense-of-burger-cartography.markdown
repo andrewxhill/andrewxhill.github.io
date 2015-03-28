@@ -14,7 +14,7 @@ The origin of CartoDB is a curious story, but it can be summed up nicely as _a c
 
 ## Goodbye old world
 
-I think the hardest thing about cartography is that people often get self-referncially dogmatic about some previously decided laws of cartography. "Rainbow maps are evil", "Normalization or off to the gallows", "Colorbrewer or it didn't happen!". From what I know though, cartography is a field that is nowhere near a science. The most exciting thing about cartography is that it is an interesting mixing pot of cognitive science, geography, politics, storytelling, design, and probably 5 other field that I'm too drunk to remember. 
+I think the hardest thing about cartography is that people often get self referentially dogmatic about some previously decided laws of cartography. "Rainbow maps are evil", "Normalization or off to the gallows", "Colorbrewer or it didn't happen!". From what I know though, cartography is a field that is nowhere near a science. The most exciting thing about cartography is that it is an interesting mixing pot of cognitive science, geography, politics, storytelling, design, and probably 5 other field that I'm too drunk to remember. 
 
 Like many other fields, the cartography thing is changing fast. I like to point out how many other non-scientific and scientific fields have many times in their history gotten stuck in local optima. Dogma sets in, the optima sticks around as _almost laws_, and then some Indiana Joneseque hero comes in and shows that there is a taller mountain through the clouds. Entire fields change their text books, and the history of mistakes is sorta forgotten. 
 
