@@ -60,7 +60,7 @@ So what is _burger cartography_? It is what I'm going to start calling this expl
 
 [![tweet](/img/posts/cartography/burger.png)](https://twitter.com/andrewxhill/status/576442676419125248)
 
-I'm sure that some people saw my tweet and were like, "Oh ziing, good one! Use markers and proper color composition or get off the map!". But the tweet was genuine love for this map. It tickles me and makes me really think a lot about how important it is to remember that our rules are temporary. I'm ready to learn.
+I'm sure that some people saw my tweet and were like, "Oh ziing, good one! Use markers and proper color composition or get off the map!". But the tweet was genuine love for this map. It tickles me and makes me really think a lot about how our rules are temporary. I'm ready to learn.
 
 Get ready to fall in love with mapping all over again!
 
