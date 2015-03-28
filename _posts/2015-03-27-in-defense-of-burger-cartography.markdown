@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "In defense of Burger Cartography"
-subtitle: "Or, you better fall in love with maps all over again."
+title: "In defense of burger Cartography"
+subtitle: "Or, time to fall in love with maps all over again."
 modified: 2015-03-27
 category: blog
 tags: [cartography, drunk]
 header-img: "img/posts/cartography/header.png"
-draft: true
 ---
 
 ## The future of cartography wont be defined by you
@@ -25,7 +24,7 @@ The dogma of cartography is certain to be overturned by new discoveries, prefere
 
 I was an early skeptic of [Twitter Maps](http://blog.cartodb.com/twitter-maps/) on CartoDB. I was pretty vocal that we needed to find ways to automate normalization, study the effects of color composition in animations, etc. We actually started work on some of these and I think that the outputs will be some new and interesting ways to deal with animation on maps. Externally too, a lot of interesting analyses [have been published](http://www.floatingsheep.org/2014/08/mapping-ferguson-tweets-or-more-maps.html) which help us think about the problem. I love it, that rush to understand something new. 
 
-A more recent story has provided a more critical but [pretty uniformative](http://www.citylab.com/housing/2015/03/why-most-twitter-maps-cant-be-trusted/388586/) review of Twitter maps. This prompted me to finally write this blog down. It has been in my mind a lot recently. Even in my recent talk at [FOSS4G-NA](https://2015.foss4g-na.org/session/what-map) I devoted some time to explain the rapid shift to flat design on the web and on mobile in a matter of months, thinking about that in the context of cartography. Cartography is more than just design, so I also devoted some time looking at the real intent and outcome of the Twitter map makers (among other CartoDB users producing curious new maps). In the end, I've changed my mind completely. I think the Twitter maps are spot-on and achieve their objective better than you can imagine. 
+A more recent story has provided a [more critical](http://www.citylab.com/housing/2015/03/why-most-twitter-maps-cant-be-trusted/388586/) review of Twitter maps, but in my opinion it is too caught up in the belief that mapping and map makers must all share a single motivation. At least it prompted me to finally write this blog down. It has been in my mind a lot recently. Even in my recent talk at [FOSS4G-NA](https://2015.foss4g-na.org/session/what-map) I devoted some time to explain the rapid shift to world of flat UIs on the web and on mobile in a matter of months, thinking about that in the context of cartography. Cartography is more than just design, so I also devoted some time looking at the real intent and outcome of the Twitter map makers (among other CartoDB users producing curious new maps). In the end, I've changed my mind completely. I think the Twitter maps are spot-on and achieve their objective better than you can imagine. 
 
 Welcome on board the journey for the new world of cartography, your old world criticism has missed the boat.
 
@@ -61,7 +60,7 @@ So what is _burger cartography_? It is what I'm going to start calling this expl
 
 [![tweet](/img/posts/cartography/burger.png)](https://twitter.com/andrewxhill/status/576442676419125248)
 
-I'm sure that some people saw my tweet and were like, "Oh ziing, good one! Use markers and proper color composition or get off the map!". But the tweet was genuine my love for this map. It tickles me and makes me really think a lot about what playful cartography will do next. I'm ready to learn.
+I'm sure that some people saw my tweet and were like, "Oh ziing, good one! Use markers and proper color composition or get off the map!". But the tweet was genuine love for this map. It tickles me and makes me really think a lot about how important it is to remember that our rules are temporary. I'm ready to learn.
 
-Get ready to fall in love with cartography all over again!
+Get ready to fall in love with mapping all over again!
 
