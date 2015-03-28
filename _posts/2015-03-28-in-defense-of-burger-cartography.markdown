@@ -2,7 +2,7 @@
 layout: post
 title: "In defense of burger Cartography"
 subtitle: "Or, time to fall in love with maps all over again."
-modified: 2015-03-27
+modified: 2015-03-28
 category: blog
 tags: [cartography, drunk]
 header-img: "img/posts/cartography/header.png"
