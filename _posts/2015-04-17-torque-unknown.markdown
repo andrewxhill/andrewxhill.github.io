@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "More on Torque maps"
+title: "More on Torque "
 subtitle: " and some methods you may have missed"
 modified: 2015-04-17
 category: blog
