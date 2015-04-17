@@ -11,6 +11,8 @@ header-img: "img/posts/torque-unknown/header.png"
 
 Classifying Torque maps is a neuron-twister. They are essentially rasters, but they regenerate based on zoom and respond to headers defined on the fly by the users. At the end of the day, they resemble much closer vector points. I dunno, they are kinda Point-based Vector Tiles... they are kinda not. At the end of the day, they are Torque and all the rest are immitators. 
 
+If you aren't familiar with how Torque works, this [very old slide deck](http://gijs.github.io/images/cartodb_datacubes.pdf) still has some relevant information. Also review the posts of [Javi Santana](http://javisantana.com/blog.html).
+
 ## Static maps that static
 
 Given that they do a great job whipping tons of points into shape, they also have some cool uses even when you don't want to animate data. The reason is that the minimum necessary data is sent to the browser to render. Two key point are **minimum** and **sent to the browser**, those are the magic keywords to the web graphics secret societies. 
