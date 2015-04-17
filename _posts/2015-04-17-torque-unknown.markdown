@@ -174,7 +174,7 @@ Map {
 }
 
 #hamburgers{
-  comp-op: multiply;
+  comp-op: darken;
   marker-fill-opacity: 0.7;
   marker-line-color: #FFF;
   marker-line-width: 0;
@@ -212,7 +212,7 @@ Map {
 }
 
 #hamburgers{
-  comp-op: multiply;
+  comp-op: darken;
   marker-fill-opacity: 0.7;
   marker-line-color: #FFF;
   marker-line-width: 0;
@@ -269,7 +269,7 @@ Map {
 }
 
 #hamburgers{
-  comp-op: multiply;
+  comp-op: darken;
   marker-fill-opacity: 0.3;
   marker-line-color: #FFF;
   marker-line-width: 0;
