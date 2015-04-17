@@ -218,7 +218,7 @@ Map {
   marker-line-width: 0;
   marker-line-opacity: 1;
   marker-type: ellipse;
-  marker-width: 6;
+  marker-width: 3;
   marker-fill: white;
 }
 #hamburgers[value=1] {
