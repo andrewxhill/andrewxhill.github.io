@@ -72,7 +72,6 @@ Like I said before, now the data is rendered in the client. That means we can do
 
 One of my favorite parts though, zoom based aggregation is _built in_. Go ahead, zoom in and you'll see the the dots always remain the same number of screen pixels.
 
-
 ## Bubble maps that grow
 
 Another thing I really like playing with in Torque are bubble maps. Actually, you can combine static Torque maps and bubble maps [quite easily](http://bl.ocks.org/andrewxhill/94688372b76060f7a6e8). But in this case, I'm more interested in making bubble maps that grow over time as more _events_ occur under the bubble. I first described the method in a [StackExchange ticket](http://gis.stackexchange.com/questions/129838/show-change-in-size-over-time/130114#130114) back in January, but let's revisit it here. 
