@@ -194,7 +194,7 @@ Map {
 }
 {% endhighlight %}
 
-Burger King is killing it... but there is a problem, what happens when a pixel has both values in it? It is clear that when two pixels adjacent to each other overlap we get the blending effect that makes them blue. But we need to blend them somehow using our aggregate function. Here is a simple way,
+McDonalds is killing it... but there is a problem, what happens when a pixel has both values in it? It is clear that when two pixels adjacent to each other overlap we get the blending effect that makes them blue. But we need to blend them somehow using our aggregate function. Here is a simple way,
 
 {% highlight css %}
   -torque-aggregation-function:"sum(distinct(category_name))";
