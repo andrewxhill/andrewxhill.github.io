@@ -62,13 +62,13 @@ If you are familiar with CartoCSS in Torque, you'll notice we do a few strange t
   -torque-animation-duration:0;
 {% endhighlight %}
 
-The first rule, _torque-frame-count_ tells Torque to only have 1 single frame in time. The second rule tells Torque to not play the time-slider. If we used the [CartoDB.js](http://docs.cartodb.com/cartodb-platform/cartodb-js.html) to put the map on the site, we would remove the time-slider from view entirely too. I'm just going to embed the map with an iframe, so it will still be there. Let's take a look at the outcome,
+The first rule, _torque-frame-count_ tells Torque to only have 1 single frame in time. The second rule tells Torque to not play the time-slider. Let's take a look at the outcome,
 
 <iframe width='100%' height='420' frameborder='0' src='https://team.cartodb.com/u/andrew/viz/e7fa45bc-e53b-11e4-aec4-0e0c41326911/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 #### Why is it neat?
 
-Like I said before, now the data is rendered in the client. That means we can do neat things with it. Using the CartoDB.js library, we can add events to our map and restyle or filter the data on the fly based on the values returned by our aggregation. Take a look at [this map](http://bl.ocks.org/andrewxhill/adb44dcdcf30ee449e87) for inspiration on using dynamically set Torque styles. You can also have tight control on the colors returned by each aggregation, which can be challenging using color-compositing often done on tile based maps. 
+Like I said before, now the data is rendered in the client. That means we can do neat things with it. Using the [CartoDB.js](http://docs.cartodb.com/cartodb-platform/cartodb-js.html) library, we can add events to our map and restyle or filter the data on the fly based on the values returned by our aggregation. Take a look at [this map](http://bl.ocks.org/andrewxhill/adb44dcdcf30ee449e87) for inspiration on using dynamically set Torque styles. You can also have tight control on the colors returned by each aggregation, which can be challenging using color-compositing often done on tile based maps. 
 
 
 ## Bubble maps that grow
