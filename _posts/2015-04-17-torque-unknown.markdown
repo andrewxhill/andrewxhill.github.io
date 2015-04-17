@@ -306,7 +306,8 @@ Map {
 That's a quick brain-dump of some fun things to do with Torque. Using combinations of the aggregation method and the variable CartoCSS, you can do some pretty far out things. Give it a try!
 
 _btw. if you noticed something funky happening in some of the pixels on the maps, it's because i'm doing unnormal things with torque. you can follow the [ticket here](https://github.com/CartoDB/torque/issues/166)_
-_
+
+
 <script type="text/javascript">
 
     var main = function() {
