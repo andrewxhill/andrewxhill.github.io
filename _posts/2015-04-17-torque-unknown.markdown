@@ -70,6 +70,8 @@ The first rule, _torque-frame-count_ tells Torque to only have 1 single frame in
 
 Like I said before, now the data is rendered in the client. That means we can do neat things with it. Using the [CartoDB.js](http://docs.cartodb.com/cartodb-platform/cartodb-js.html) library, we can add events to our map and restyle or filter the data on the fly based on the values returned by our aggregation. Take a look at [this map](http://bl.ocks.org/andrewxhill/adb44dcdcf30ee449e87) for inspiration on using dynamically set Torque styles. You can also have tight control on the colors returned by each aggregation, which can be challenging using color-compositing often done on tile based maps. 
 
+One of my favorite parts though, zoom based aggregation is _built in_. Go ahead, zoom in and you'll see the the dots always remain the same number of screen pixels.
+
 
 ## Bubble maps that grow
 
