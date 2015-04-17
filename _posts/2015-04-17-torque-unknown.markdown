@@ -15,7 +15,7 @@ If you aren't familiar with how Torque works, this [very old slide deck](http://
 
 ## Static maps that static
 
-Given that Torque does a great job whipping tons of points into shape, it also has some cool uses even when you don't want to animate data. The reason is that the minimum necessary data is sent to the browser to render. Two key points are **minimum** and **sent to the browser**, those are the magic keywords to the web graphics secret societies. 
+Given that Torque does a great job whipping tons of points into shape, it also has some cool uses even when you don't want to animate data. The reason is that the minimum necessary data is sent to the browser to render. Two key points are **minimum** and **sent to the browser**, those are like magic keywords to the web graphics secret societies. 
 
 Why is that interesting for **static maps**? Because unlike tile based maps, you have the data right there to do cool things with in the browser! Here is how you do it.
 
