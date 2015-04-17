@@ -259,18 +259,18 @@ Map {
 -torque-animation-duration:0;
 -torque-time-attribute:"postedtime";
 -torque-aggregation-function:"sum(distinct(category_name))";
--torque-resolution:2;
+-torque-resolution:4;
 -torque-data-aggregation:cumulative;
 }
 
 #hamburgers{
   comp-op: darken;
-  marker-fill-opacity: 0.5;
+  marker-fill-opacity: 1;
   marker-line-color: #FFF;
   marker-line-width: 0;
   marker-line-opacity: 1;
-  marker-type: ellipse;
-  marker-width: 3;
+  marker-type: rectangle;
+  marker-width: 2;
   marker-fill: white;
 }
 #hamburgers[value=1] {
