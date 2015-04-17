@@ -247,7 +247,7 @@ _There is a pretty nice way to do it with three categories too, but I'll leave t
 
 Now, let's combine that with our first method above, static torque.
 
-<iframe width='100%' height='520' frameborder='0' src='https://team.cartodb.com/u/andrew/viz/1fa4f32e-e553-11e4-a74b-0e853d047bba/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<iframe width='100%' height='420' frameborder='0' src='https://team.cartodb.com/u/andrew/viz/1fa4f32e-e553-11e4-a74b-0e853d047bba/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 Simple change here, 
 
