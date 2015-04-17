@@ -141,7 +141,9 @@ I'm fond of making Torque maps that use high **resolution** values. This paramet
 
 #### Why is it neat?
 
-This method is just a stab at something interesting, I think there is a lot more to do in there. But it shows you some simple uses of aggregation functions and the **value** parameter that it returns. You can also do it with a **linear** rendering instead of the **cumulative** one I show, [take a look here](https://team.cartodb.com/u/andrew/viz/32ff4f28-7e51-11e4-9555-0e853d047bba/public_map).
+This method is just a stab at something interesting, I think there is a lot more to do in there. But it shows you some simple uses of aggregation functions and the **value** parameter that it returns. 
+
+You can also do it with a **linear** rendering instead of the **cumulative** one I show, [take a look here](https://team.cartodb.com/u/andrew/viz/32ff4f28-7e51-11e4-9555-0e853d047bba/public_map).
 
 ## Category maps that categorize
 
