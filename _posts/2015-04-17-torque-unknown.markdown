@@ -209,7 +209,7 @@ Map {
 -torque-frame-count:128;
 -torque-animation-duration:10;
 -torque-time-attribute:"postedtime";
--torque-aggregation-function:"CDB_Math_Mode(category_name)";
+-torque-aggregation-function:"sum(distinct(category_name))";
 -torque-resolution:2;
 -torque-data-aggregation:cumulative;
 }
@@ -244,6 +244,46 @@ Which now looks more _mixed_,
 What!? Why would you ask that? This is just an early stab at how to mix dynamic SQL and some really cool color compositing on the client side Torque rendering. Play with it, I'm sure you'll find some neat things here.
 
 _There is a pretty nice way to do it with three categories too, but I'll leave that for you to work out._
+
+Now, let's combine that with our first method above, static torque.
+
+<iframe width='100%' height='520' frameborder='0' src='https://team.cartodb.com/u/andrew/viz/1fa4f32e-e553-11e4-a74b-0e853d047bba/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+Simple change here, 
+
+**cartocss**
+
+{% highlight css %}
+Map {
+-torque-frame-count:1;
+-torque-animation-duration:0;
+-torque-time-attribute:"postedtime";
+-torque-aggregation-function:"sum(distinct(category_name))";
+-torque-resolution:2;
+-torque-data-aggregation:cumulative;
+}
+
+#hamburgers{
+  comp-op: darken;
+  marker-fill-opacity: 0.5;
+  marker-line-color: #FFF;
+  marker-line-width: 0;
+  marker-line-opacity: 1;
+  marker-type: ellipse;
+  marker-width: 3;
+  marker-fill: white;
+}
+#hamburgers[value=1] {
+   marker-fill: #ff00ff;
+}
+#hamburgers[value=2] {
+   marker-fill: aqua;
+}
+#hamburgers[value>2] {
+   marker-fill: blue;
+}
+{% endhighlight %}
+
 
 ## Category maps that diverge
 
