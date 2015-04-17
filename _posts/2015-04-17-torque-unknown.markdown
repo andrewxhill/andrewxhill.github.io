@@ -9,7 +9,7 @@ header-img: "img/posts/torque-unknown/header.png"
 ---
 
 
-Classifying Torque maps is a neuron-twister. They are essentially rasters, but they regenerate based on zoom and respond to headers defined on the fly by the users. At the end of the day, they resemble much closer vector points. I dunno, they are kinda Point-based Vector Tiles... they are kinda not. At the end of the day, they are Torque and all the rest are immitators. 
+Classifying Torque maps is a neuron-twister. They are essentially rasters, but they regenerate based on zoom and respond to headers defined on the fly by the users. At the end of the day, they resemble much closer vector points. I dunno, they are kinda Point-based Vector Tiles... they are kinda not. At the end of the day, they are Torque and all the rest are imitators. 
 
 If you aren't familiar with how Torque works, this [very old slide deck](http://gijs.github.io/images/cartodb_datacubes.pdf) still has some relevant information. Also review the posts of [Javi Santana](http://javisantana.com/blog.html).
 
@@ -17,7 +17,7 @@ If you aren't familiar with how Torque works, this [very old slide deck](http://
 
 Given that they do a great job whipping tons of points into shape, they also have some cool uses even when you don't want to animate data. The reason is that the minimum necessary data is sent to the browser to render. Two key point are **minimum** and **sent to the browser**, those are the magic keywords to the web graphics secret societies. 
 
-Why is that interesting for **static maps**? Because unlike tile based maps, you have the data right their to do cool things with in the browser! Here is how you do it.
+Why is that interesting for **static maps**? Because unlike tile based maps, you have the data right there to do cool things with in the browser! Here is how you do it.
 
 _For all my examples below, I'll use a dataset of tweets about McDonalds versus Burger King over a few day period. If you are doing this in the editor, before you apply the CartoCSS, you must select a Torque map from the CartoDB Editor's wizards._
 
@@ -62,7 +62,7 @@ If you are familiar with CartoCSS in Torque, you'll notice we do a few strange t
   -torque-animation-duration:0;
 {% endhighlight %}
 
-The first rule, _torque-frame-count_ tells Torque to only have 1 single frame in time. The second rule tells Torqque to not play the time-slider. If we used the [CartoDB.js](http://docs.cartodb.com/cartodb-platform/cartodb-js.html) to put the map on the site, we would remove the timeslider from view entirely too. I'm just going to embed the map with an iframe, so it will still be there. Let's take a look at the outcome,
+The first rule, _torque-frame-count_ tells Torque to only have 1 single frame in time. The second rule tells Torque to not play the time-slider. If we used the [CartoDB.js](http://docs.cartodb.com/cartodb-platform/cartodb-js.html) to put the map on the site, we would remove the time-slider from view entirely too. I'm just going to embed the map with an iframe, so it will still be there. Let's take a look at the outcome,
 
 <iframe width='100%' height='420' frameborder='0' src='https://team.cartodb.com/u/andrew/viz/e7fa45bc-e53b-11e4-aec4-0e0c41326911/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
@@ -133,7 +133,7 @@ Here is what you get,
 
 <iframe width='100%' height='420' frameborder='0' src='https://team.cartodb.com/u/andrew/viz/e4709334-e53a-11e4-b6e6-0e853d047bba/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
-We explicity set the **time-attribute** to the column in our dataset that has the timestamps to order the visualization by. This is the standard method in Torque, but we didn't need it in our static maps because we weren't replaying time in the final map. Here we do.
+We explicitly set the **time-attribute** to the column in our dataset that has the timestamps to order the visualization by. This is the standard method in Torque, but we didn't need it in our static maps because we weren't replaying time in the final map. Here we do.
 
 The **aggregation-function** is one of my favorite parts of Torque because it is actually embedded **SQL** right in our CartoCSS. It tells torque how to add up the data inside each 3D time-space pixel in Torque. Here, I just say, **ADD 'EM UP!**, since **sum(1)** will just add 1 for each row in the set. 
 
@@ -153,7 +153,7 @@ There are a couple of funny things about categorical maps in Torque. The first i
   -torque-aggregation-function:"CDB_Math_Mode(category_name)";
 {% endhighlight %}
 
-The **category_name** column holds an integer for each category and **CDB_Math_Mode** returns the [mode](http://en.wikipedia.org/wiki/Mode_%28statistics%29) or category of most occurances for each Torque pixel over time. That is fine, but it means that the color rendered is going to be _either/or_ and then blending is all funny because you may have missed pixels where there was some of each. Let's get crazy and fix this.
+The **category_name** column holds an integer for each category and **CDB_Math_Mode** returns the [mode](http://en.wikipedia.org/wiki/Mode_%28statistics%29) or category of most occurrences for each Torque pixel over time. That is fine, but it means that the color rendered is going to be _either/or_ and then blending is all funny because you may have missed pixels where there was some of each. Let's get crazy and fix this.
 
 I saw a possible way forward in the methods described in Stamen's [Trees, Cabs & Crime](http://content.stamen.com/trees-cabs-crime_in_venice) map. Basically, we can do some nice things with color composite. Let's start with a default Torque Category map with two colors, **aqua** and **magenta**.
 
@@ -191,7 +191,7 @@ Map {
 }
 {% endhighlight %}
 
-Burger King is killing it... but there is a problem, what happens when a pixel has both values in it? It is clear that when two pixels adjecent to each other overlap we get the blending effect that makes them blue. But we need to blend them somehow using our aggregate function. Here is a simple way,
+Burger King is killing it... but there is a problem, what happens when a pixel has both values in it? It is clear that when two pixels adjacent to each other overlap we get the blending effect that makes them blue. But we need to blend them somehow using our aggregate function. Here is a simple way,
 
 {% highlight css %}
   -torque-aggregation-function:"sum(distinct(category_name))";
@@ -300,7 +300,7 @@ Map {
 
 ## Conclusions that are concluding
 
-That's a quick braindump of some fun things to do with Torque. Using combinations of the aggregation method and the variable CartoCSS, you can do some pretty far out things. Give it a try!
+That's a quick brain-dump of some fun things to do with Torque. Using combinations of the aggregation method and the variable CartoCSS, you can do some pretty far out things. Give it a try!
 
 <script type="text/javascript">
 
