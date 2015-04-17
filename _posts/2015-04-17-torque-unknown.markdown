@@ -8,11 +8,10 @@ tags: [cartography, torque, methods]
 header-img: "img/posts/torque-unknown/header.png"
 ---
 
-The origin of CartoDB is a curious story, but it can be summed up nicely as _a collective of environmentalists, technolgists, and designers that decided maps shouldn't remain difficult to create just because old school software hadn't been brought up to speed with modern technology_. I've worked at CartoDB since the beginning, which has been, to say the least, a trip. One thing that I've learned, is that I will never learn enough. Or to say it another way, I never know quite what I'm talking about because what I'm seeing has never been talked about before. Nowhere is this lesson more apparent than in cartography.
-
-## Static maps that static
 
 Classifying Torque maps is a neuron-twister. They are essentially rasters, but they regenerate based on zoom and respond to headers defined on the fly by the users. At the end of the day, they resemble much closer vector points. I dunno, they are kinda Point-based Vector Tiles... they are kinda not. At the end of the day, they are Torque and all the rest are immitators. 
+
+## Static maps that static
 
 Given that they do a great job whipping tons of points into shape, they also have some cool uses even when you don't want to animate data. The reason is that the minimum necessary data is sent to the browser to render. Two key point are **minimum** and **sent to the browser**, those are the magic keywords to the web graphics secret societies. 
 
