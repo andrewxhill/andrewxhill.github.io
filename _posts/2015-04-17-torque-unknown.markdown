@@ -9,7 +9,7 @@ header-img: "img/posts/torque-unknown/header.png"
 ---
 
 
-Classifying Torque maps is a neuron-twister. They are essentially rasters, but they regenerate based on zoom and respond to headers defined on the fly by the users. They resemble vector points when you finally see them. I dunno, they are kinda Point-based Vector Tiles with built in simplification... they are kinda not. At the end of the day, they are Torque and all the rest are imitators. 
+Classifying Torque maps is a neuron-twister. They are essentially rasters, but they regenerate based on zoom and respond to headers defined on the fly by the users. They resemble vector points when you finally see them. I dunno, they are kinda Point-based Vector Tiles with built in simplification... they are kinda not. At the end of the day, they are just Torque and all the rest are imitators. 
 
 If you aren't familiar with how Torque works, this [very old slide deck](http://gijs.github.io/images/cartodb_datacubes.pdf) still has some relevant information. Also review the posts of [Javi Santana](http://javisantana.com/blog.html).
 
