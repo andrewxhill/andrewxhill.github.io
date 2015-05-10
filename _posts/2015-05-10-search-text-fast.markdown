@@ -8,7 +8,7 @@ tags: [cartodb, sql, methods, search]
 header-img: "img/posts/full-text-search/header.jpg"
 ---
 
-This post is going to be short. Basically, CartoDB runs on the coolest database in [PostgreSQL](http://www.postgresql.org/). Because it runs on such an amazing open source technolgy, we often get to tap into amazing advances and amazing documentation of methods that come from the community. 
+This post is going to be short. Basically, CartoDB runs on the coolest database in the world, [PostgreSQL](http://www.postgresql.org/). Because it runs on such an amazing open source technolgy, we often get to tap into amazing advances and amazing documentation of methods that come from the community. 
 
 One really nice write-up I came across over the week was, [Full text search in milliseconds with PostgreSQL](https://blog.lateral.io/2015/05/full-text-search-in-milliseconds-with-postgresql/) by [Max Novakovic](https://twitter.com/maxnovakovic). If you haven't read the post, it just shows you the handful of steps you need to take in order to make really fast, full text search possible in your PostgreSQL tables. I read the post and was like, "CartoDB readers need to know this". 
 
