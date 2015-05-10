@@ -40,7 +40,7 @@ When adding indexes in CartoDB, I often include the name of the table directly i
 
 ### Updates - setting our tsvector values
 
-Just like addeing columns and indexes in CartoDB, we can run UPDATEs directly int the editor. Here we are going to follow Max's method, but we aren't using a JSON column as input, I'm just using my two text columns ```name``` and ```passage```, so my query looks a bit different.
+Just like addeing columns and indexes in CartoDB, we can run UPDATEs directly in the editor. Here we are going to follow Max's method, but we aren't using a JSON column as input, I'm just using my two text columns ```name``` and ```passage```, so my query looks a little bit different.
 
 
 {% highlight sql %}
