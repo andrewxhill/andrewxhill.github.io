@@ -13,7 +13,7 @@ In my [post last week](/blog/2015/12/01/communication/), I started digging into 
 
 ### Introducing BrainHubs
 
-Brainhubs are the yin to the Company Townhall yang.
+BrainHubs are the yin to the Company Townhall yang.
 
 Here is the basic idea. Each week 5 random people join me for a BrainHub and coffee. The first 3 minutes we go over ground rules,
 
