@@ -29,7 +29,7 @@ There are some nuggets I've been learning. BrainHubs aren't good for new recruit
 
 ### BrainHub Objectives
 
-When I started imagining a solution like BrainHub, the problem I was trying to fix was simple. I noticed that at lunchtime or other relaxed moments at the company, people were rarely asking each other about their work or exciting projects going on. Conversations defaulted to things like weekend plans, relationship... or worse, the weather. I had a suspicion that the reason people weren't talking about the amazing things they were working on was because they didn't know the right questions to ask each other. They didn't know where to start those conversations. 
+When I started imagining a solution like BrainHub, the problem I was trying to fix was simple. I noticed that at lunchtime or other relaxed moments at the company, people were rarely asking each other about their work or exciting projects going on. Conversations defaulted to things like weekend plans, relationships... or worse, the weather. I had a suspicion that the reason people weren't talking about the amazing things they were working on was because they didn't know the right questions to ask each other. They didn't know where to start those conversations. 
 
 So the objective of BrainHub seems obvious at first, _share ideas_. But as I started formulating the concept, I realized I could target a deeper set of objectives:
 
