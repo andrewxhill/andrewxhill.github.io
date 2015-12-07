@@ -42,7 +42,7 @@ So the objective of BrainHub seems obvious at first, _share ideas_. But as I sta
 
 Each BrainHub ends with all five members filling out a quick feedback form. I just created it as a Google Form. Through the form, I collect various bits of information about how people feel at the company, related to how much they know or feel like they don't know. I also solicit suggestions to improve the BrainHub itself, and various other questions that help me measure the culture at the company. 
 
-For example, I ask people how satisfied they are with their knowledge about the company. I want this number to keep going up. It wont be BrainHubs alone that makes it hit the top, but BrainHubs are a great place to track it. 
+For example, I ask people how satisfied they are with their knowledge about the company. I want this number to keep going up. It wont be BrainHubs alone that makes that number hit the top, but BrainHubs are a great place to track it. 
 
 I ask people how frequently they would like to be included in a BrainHub. Overwhelmingly people see a value in being part of a BrainHub every 2 weeks. For a company our size, it means I would need to run a BrainHub more than once per day every day to get people through fast enough... 
 
