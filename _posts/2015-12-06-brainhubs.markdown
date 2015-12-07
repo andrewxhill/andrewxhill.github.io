@@ -35,7 +35,7 @@ So the objective of BrainHub seems obvious at first, _share ideas_. But as I sta
 
 1. Focus on the small (what are you working on right now) so that people aren't afraid or bashful to share with each other the small things. As a company, we spend a lot of time celebrating and communicating the big things, so it can be easy to forget just how important the small things are.
 2. Build a stronger culture of asking questions. The best way to learn about your colleagues and the amazing things they are working on, is to ask. 
-3. Try to loosen any hierarchical barriers. Someones position or tenure at the company shouldn't ever make them intimidating to others. Everyone comes through BrainHubs, from founders to interns. 
+3. Try to loosen any hierarchical barriers. Someone's position or tenure at the company shouldn't ever make them intimidating to others. Everyone comes through BrainHubs, from founders to interns. 
 4. Seed people's minds with at least a basic map of what other people are working on in the company directly through the sharing in the BrainHub. That map can serve as an important reference when they have a new idea they want to share or a project they need to make successful.
 
 ### Feedback
