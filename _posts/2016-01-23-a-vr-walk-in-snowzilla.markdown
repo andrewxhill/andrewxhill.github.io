@@ -52,6 +52,14 @@ src="https://maps.google.com/maps?layer=c&panoid=F:-sNUW4YHSZgM/VqP37uMmrhI/AAAA
 
 [Download from Google+](https://plus.google.com/photos/107020500010126408534/albums/6243103610187687841/6243106113850879506?pid=6243106113850879506&oid=107020500010126408534)
 
-McCarren Park had a good amount of life in it. People were playing tag football, parents were pull heavy sleds of children and the dogs were running like mad. Overall, it made the storm feel pretty playfull and pleasant.
+McCarren Park had a good amount of life in it. People were playing tag football, parents were pull heavy sleds of children and the dogs were running like mad. Overall, it made the storm feel pretty playful and pleasant.
 
-_If you care to use any of these photos, go for it, no need to credit or ask._
+<iframe width="100%" height="450" frameborder="0" style="border:0"
+src="https://maps.google.com/maps?layer=c&panoid=F:-_wcp2sp80zw/VqUUgQ3q1_I/AAAAAAAAK68/2LS3I-SyQFM&ie=UTF8&source=embed&output=svembed&cbp=13%2C105%2C%2C0%2C1.8" allowfullscreen></iframe>
+
+Williamsburg at night
+
+<iframe width="100%" height="450" frameborder="0" style="border:0"
+src="https://maps.google.com/maps?layer=c&panoid=F:-ODkTkwOtW7k/VqUUGK07OnI/AAAAAAAAK6w/wl-ZrmZ-BKM&ie=UTF8&source=embed&output=svembed&cbp=13%2C105%2C%2C0%2C1.8" allowfullscreen></iframe>
+
+Greenpoint rooftop
