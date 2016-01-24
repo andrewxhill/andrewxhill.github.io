@@ -58,8 +58,3 @@ McCarren Park had a good amount of life in it. People were playing tag football,
 src="https://maps.google.com/maps?layer=c&panoid=F:-_wcp2sp80zw/VqUUgQ3q1_I/AAAAAAAAK68/2LS3I-SyQFM&ie=UTF8&source=embed&output=svembed&cbp=13%2C105%2C%2C0%2C1.8" allowfullscreen></iframe>
 
 Williamsburg at night
-
-<iframe width="100%" height="450" frameborder="0" style="border:0"
-src="https://maps.google.com/maps?layer=c&panoid=F:-ODkTkwOtW7k/VqUUGK07OnI/AAAAAAAAK6w/wl-ZrmZ-BKM&ie=UTF8&source=embed&output=svembed&cbp=13%2C105%2C%2C0%2C1.8" allowfullscreen></iframe>
-
-Greenpoint rooftop
