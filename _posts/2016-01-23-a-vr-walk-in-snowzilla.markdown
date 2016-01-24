@@ -38,7 +38,7 @@ src="https://maps.google.com/maps?layer=c&panoid=F:-Y0blh-7vIjI/VqP1pcaEwwI/AAAA
 
 [Download from Google+](https://plus.google.com/photos/107020500010126408534/albums/6243103610187687841/6243103600814637826?pid=6243103600814637826&oid=107020500010126408534)
 
-Seeing the bridge from down below made me want to see it from up above too. Surprisingly there was a meek but steady flow of people walking across the pathway. The top reminded me less of a bridge and more of the peak of a mountain on a bad day. The wind whipped and the snow stung at times. That is one thing I really like about the raw Google Cardboard camera, it also captures a loop of sound, making the VR come even more to life.
+Seeing the bridge from down below made me want to see it from up above too. Surprisingly there was a meager but steady flow of people walking across the pathway. The top reminded me less of a bridge and more of the peak of a mountain on a bad day. The wind whipped and the snow stung at times. That is one thing I really like about the raw Google Cardboard camera, it also captures a loop of sound, making the VR come even more to life.
 
 <iframe width="100%" height="450" frameborder="0" style="border:0"
 src="https://maps.google.com/maps?layer=c&panoid=F:-HDb_EdEFZDc/VqP4N7ZhVdI/AAAAAAAAK2U/gLpPSxI5IjQ&ie=UTF8&source=embed&output=svembed&cbp=13%2C105%2C%2C0%2C1.8" allowfullscreen></iframe>
