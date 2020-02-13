@@ -60,6 +60,10 @@ jobs:
       env: 
         BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
       run: |
+            export GOPATH=$HOME/go
+            export GOBIN=$(go env GOPATH)/bin
+            export PATH=$PATH:$GOPATH
+            export PATH=$PATH:$GOBIN
             cp -r img ~/project/${BUCKET_NAME}
             cd ~/project
             echo $(ls ~/project)
