@@ -36,7 +36,7 @@ jobs:
             echo $(ls $GOBIN)
             cd ~/daemon/textile
             go mod download
-            go install cmd/textile/...
+            go install ./cmd/textile/...
             echo $(which textile)
     - name: Setup session
       env: 
