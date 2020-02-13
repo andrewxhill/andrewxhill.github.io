@@ -33,20 +33,17 @@ jobs:
             mkdir -p $GOPATH/pkg
             mkdir -p $GOBIN
             mkdir -p $GOPATH/src/
+            echo $(ls $GOBIN)
             cd ~/daemon/textile
             go mod download
             go install cmd/textile/...
-    - name: Run Daemon
+            echo $(which textile)
+    - name: Setup session
       env: 
         AUTH_YML: ${{ secrets.AUTH_YML }}
       run: |
-            export GOPATH=$HOME/go
-            export GOBIN=$(go env GOPATH)/bin
-            export PATH=$PATH:$GOPATH
-            export PATH=$PATH:$GOBIN
             mkdir -p ~/.textile
             echo ${AUTH_YML} > ~/.textile/auth.yml
-            echo $(ls ~/.textile)
     - name: Init Local Project
       env: 
         PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
@@ -55,6 +52,7 @@ jobs:
             export GOBIN=$(go env GOPATH)/bin
             export PATH=$PATH:$GOPATH
             export PATH=$PATH:$GOBIN
+            echo $(ls $GOBIN)
             mkdir -p ~/project
             textile project init ${PROJECT_NAME} --path ~/project
             echo $(ls ~/project)
