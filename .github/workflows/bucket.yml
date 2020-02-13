@@ -26,6 +26,13 @@ jobs:
             git clone --depth=1  https://github.com/textileio/textile.git
     - name: Build Daemon
       run: |
+            export GOPATH=$HOME/go
+            export GOBIN=$(go env GOPATH)/bin
+            export PATH=$PATH:$GOPATH
+            export PATH=$PATH:$GOBIN
+            mkdir -p $GOPATH/pkg
+            mkdir -p $GOBIN
+            mkdir -p $GOPATH/src/
             cd ~/daemon/textile
             go mod download
             go install cmd/textile/...
@@ -33,6 +40,10 @@ jobs:
       env: 
         AUTH_YML: ${{ secrets.AUTH_YML }}
       run: |
+            export GOPATH=$HOME/go
+            export GOBIN=$(go env GOPATH)/bin
+            export PATH=$PATH:$GOPATH
+            export PATH=$PATH:$GOBIN
             mkdir -p ~/.textile
             echo ${AUTH_YML} > ~/.textile/auth.yml
             echo $(ls ~/.textile)
@@ -40,6 +51,10 @@ jobs:
       env: 
         PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
       run: |
+            export GOPATH=$HOME/go
+            export GOBIN=$(go env GOPATH)/bin
+            export PATH=$PATH:$GOPATH
+            export PATH=$PATH:$GOBIN
             mkdir -p ~/project
             textile project init ${PROJECT_NAME} --path ~/project
             echo $(ls ~/project)
