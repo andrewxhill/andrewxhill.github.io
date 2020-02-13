@@ -1,0 +1,54 @@
+name: Tests
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up Go
+      uses: actions/setup-go@v1
+      with:
+        go-version: 1.13
+        
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Download Daemon
+      run: |
+            mkdir -p ~/daemon && cd ~/daemon
+            git clone --depth=1  https://github.com/textileio/textile.git
+    - name: Build Daemon
+      run: |
+            cd ~/daemon/textile
+            go mod download
+            go install cmd/textile/...
+    - name: Run Daemon
+      env: 
+        AUTH_YML: ${{ secrets.AUTH_YML }}
+      run: |
+            mkdir -p ~/.textile
+            echo ${AUTH_YML} > ~/.textile/auth.yml
+            echo $(ls ~/.textile)
+    - name: Init Local Project
+      env: 
+        PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
+      run: |
+            mkdir -p ~/project
+            textile project init ${PROJECT_NAME} --path ~/project
+            echo $(ls ~/project)
+    - name: Push build to bucket
+      env: 
+        BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
+      run: |
+            cp -r img ~/project/${BUCKET_NAME}
+            cd ~/project
+            echo $(ls ~/project)
+            textile bucket push ${BUCKET_NAME}/* ${BUCKET_NAME}
+
