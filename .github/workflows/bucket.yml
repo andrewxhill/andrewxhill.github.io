@@ -67,5 +67,5 @@ jobs:
             cp -r img ~/project/${BUCKET_NAME}
             cd ~/project
             echo $(ls ~/project)
-            textile bucket push ${BUCKET_NAME}/* ${BUCKET_NAME}
+            (sleep 2; printf '\n') | textile bucket push ${BUCKET_NAME}/* ${BUCKET_NAME}
 
