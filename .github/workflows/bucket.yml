@@ -1,0 +1,71 @@
+name: Tests
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up Go
+      uses: actions/setup-go@v1
+      with:
+        go-version: 1.13
+        
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Download Daemon
+      run: |
+            mkdir -p ~/daemon && cd ~/daemon
+            git clone --depth=1  https://github.com/textileio/textile.git
+    - name: Build Daemon
+      run: |
+            export GOPATH=$HOME/go
+            export GOBIN=$(go env GOPATH)/bin
+            export PATH=$PATH:$GOPATH
+            export PATH=$PATH:$GOBIN
+            mkdir -p $GOPATH/pkg
+            mkdir -p $GOBIN
+            mkdir -p $GOPATH/src/
+            echo $(ls $GOBIN)
+            cd ~/daemon/textile
+            go mod download
+            go install ./cmd/textile/...
+            echo $(which textile)
+    - name: Setup session
+      env: 
+        AUTH_YML: ${{ secrets.AUTH_YML }}
+      run: |
+            mkdir -p ~/.textile
+            echo ${AUTH_YML} > ~/.textile/auth.yml
+    - name: Init Local Project
+      env: 
+        PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
+      run: |
+            export GOPATH=$HOME/go
+            export GOBIN=$(go env GOPATH)/bin
+            export PATH=$PATH:$GOPATH
+            export PATH=$PATH:$GOBIN
+            echo $(ls $GOBIN)
+            mkdir -p ~/project
+            textile project init ${PROJECT_NAME} --path ~/project
+            echo $(ls ~/project)
+    - name: Push build to bucket
+      env: 
+        BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
+      run: |
+            export GOPATH=$HOME/go
+            export GOBIN=$(go env GOPATH)/bin
+            export PATH=$PATH:$GOPATH
+            export PATH=$PATH:$GOBIN
+            cp -r img ~/project/${BUCKET_NAME}
+            cd ~/project
+            echo $(ls ~/project)
+            (sleep 2; printf '\n') | textile bucket push ${BUCKET_NAME}/* ${BUCKET_NAME}
+
