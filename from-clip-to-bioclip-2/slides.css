@@ -35,7 +35,19 @@ html { scroll-snap-type: y proximity; }
 .nav button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .nav button:disabled { background: rgba(64, 64, 64, .12); cursor: default; }
 .nav svg { display: block; }
-@media print { .nav, .rail, .rail-shade { display: none; } }
+@media print { .nav, .rail, .rail-shade, .tip { display: none; } }
+
+/* note opened by the information button */
+.tip { position: fixed; right: 16px; bottom: 72px; z-index: 6; box-sizing: border-box; width: 320px;
+  max-width: calc(100vw - 32px); padding: 16px 18px; background: #fff; border: 1px solid var(--grid);
+  border-radius: 8px; box-shadow: 0 6px 24px rgba(0, 0, 0, .14);
+  font: 14px/1.5 'Open Sans', 'Helvetica Neue', Arial, sans-serif; color: var(--ink); }
+.tip[hidden] { display: none; }
+.tip p { margin: 0 0 8px; }
+.tip .url { margin: 0 0 12px; font-weight: 600; color: var(--accent); overflow-wrap: anywhere; }
+.tip button { padding: 6px 12px; border: 1px solid var(--grid); border-radius: 6px; background: #fff; cursor: pointer;
+  font: 600 13px/1.2 'Open Sans', sans-serif; color: var(--ink); }
+.tip button:hover, .tip button:focus-visible { border-color: var(--accent); color: var(--accent); }
 
 /* slide column: opens from the left */
 .rail-shade { position: fixed; inset: 0; z-index: 8; background: rgba(64, 64, 64, .18); opacity: 0;

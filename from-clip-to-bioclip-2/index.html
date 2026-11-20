@@ -4,26 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>From CLIP to BioCLIP 2</title>
-<meta name="description" content="A 42-slide explainer comparing CLIP with BioCLIP 2, the same model after biology training: species naming rose from 45.5% to 90.6%, while telling alive animals from dead ones fell from 92.1% to 85.7%.">
+<meta name="description" content="A 41-slide explainer comparing CLIP with BioCLIP 2, the same model after biology training: species naming rose from 45.5% to 90.6%, while telling alive animals from dead ones fell from 92.1% to 85.7%.">
 <meta name="author" content="Andrew Hill">
 <link rel="canonical" href="https://andrewxhill.com/from-clip-to-bioclip-2/">
 <meta property="og:title" content="From CLIP to BioCLIP 2">
-<meta property="og:description" content="A 42-slide explainer comparing CLIP with BioCLIP 2, the same model after biology training: species naming rose from 45.5% to 90.6%, while telling alive animals from dead ones fell from 92.1% to 85.7%.">
+<meta property="og:description" content="A 41-slide explainer comparing CLIP with BioCLIP 2, the same model after biology training: species naming rose from 45.5% to 90.6%, while telling alive animals from dead ones fell from 92.1% to 85.7%.">
 <meta property="og:url" content="https://andrewxhill.com/from-clip-to-bioclip-2/">
 <meta property="og:type" content="article">
 <link rel="alternate" type="text/plain" href="notes.txt" title="Method notes for each slide">
 <link rel="stylesheet" href="fonts.css">
-<link rel="stylesheet" href="slides.css?v=7ae2dbb9">
+<link rel="stylesheet" href="slides.css?v=7c5e1026">
 </head>
 <body>
 <main id="deck">
 <aside class="slide-notes" aria-hidden="true">
   <h2>About this page</h2>
-  <p>This page is a deck of 42 slides titled "From CLIP to BioCLIP 2".</p><p>Each slide is a section with the id slide-N.</p><p>Each slide is followed by its method notes and speaker notes.</p><p>The full page text is about 140,000 characters.</p><p>The notes for slide N are also published at notes/slide-N.txt.</p><p>All notes in one file are published at notes.txt.</p>
-  <ol><li>From CLIP to BioCLIP 2</li><li>The two models are two files of 427,616,513 numbers, laid out the same way</li><li>A photo and a name each become 768 numbers</li><li>Training on organism photos changed the first-layer filters by 20% and the text side’s word ta…</li><li>BioCLIP 2 scores a junco photo’s right name 0.717, up from 0.291, and its four highest wrong n…</li><li>BioCLIP 2 names 90.6% of photos of 223 species correctly, up from the starting model’s 45.5%</li><li>What did BioCLIP 2 get worse at?</li><li>BioCLIP 2 scores 85.7% at telling alive animals from dead ones; the starting model scores 92.1%</li><li>159 photos are labelled alive or dead correctly by the starting model alone, and 59 by BioCLIP…</li><li>Eight photos the starting model labels correctly as alive or dead and BioCLIP 2 labels wrongly</li><li>Eight photos BioCLIP 2 labels correctly as alive or dead and the starting model labels wrongly</li><li>Given ten vehicle names to choose from, BioCLIP 2 calls 83% of motorcycle photos “rocket”</li><li>In BioCLIP 2 the ten vehicle names are less similar to each other: 0.662 on average, down from…</li><li>On bus photos BioCLIP 2 scores the name “streetcar” 0.566, above “bus” at 0.555</li><li>Of the 8 photos each model rates most like a robin photo, BioCLIP 2 picks 7 robins and the sta…</li><li>The 8 photos the starting model rates most like a dead moose are all dead animals; BioCLIP 2’s…</li><li>In BioCLIP 2, 59% of a photo’s most similar photos share its alive-or-dead label, down from 81%</li><li>Averaging the two models’ weights gives 72.7% on species naming and 92.2% at telling alive fro…</li><li>BioCLIP 2 got worse at telling alive from dead and at naming vehicles from words, which fell f…</li><li>Where in the network does BioCLIP 2 get worse at telling alive from dead?</li><li>Every block holds 257 tokens: 256 patch tokens and 1 summary token</li><li>Up to block 16, neither model can name 1 species photo in 10 from its summary token</li><li>Through block 22, BioCLIP 2’s summary token scores higher than the starting model’s at telling…</li><li>Between blocks 22 and 23, BioCLIP 2’s summary token becomes 4.2 points worse at telling alive…</li><li>BioCLIP 2’s patch tokens still tell alive from dead at block 24: 91.0%, against 87.0% from its…</li><li>On this junco photo, BioCLIP 2’s summary token at block 24 takes 89.6% of its attention from a…</li><li>57.7% of block 1’s weight change falls where the starting model’s strongest patterns meet; in…</li><li>Block 23’s weight change needs 514 directions to hold 90% of it, close to the 523 of a random…</li><li>Two-thirds of BioCLIP 2’s fall at telling alive from dead happens at block 23, in its summary…</li><li>Can one model name species like BioCLIP 2 and tell alive from dead like the starting model?</li><li>The starting model with BioCLIP 2’s last 12 blocks copied in names 76.6% of species photos, up…</li><li>BioCLIP 2 with the starting model’s last 12 blocks copied in scores 92.9% at telling alive fro…</li><li>BioCLIP 2 tells alive from dead 4.1 points better with the starting model’s blocks 23 and 24 s…</li><li>Read from its patch tokens, an unchanged BioCLIP 2 tells alive from dead with 89.6% accuracy,…</li><li>Reading the patch tokens makes BioCLIP 2 better at telling alive from dead without lowering it…</li><li>Six measurements placed on the model, from block 1 to where photos meet names</li><li>The word “forgetting” covers three different results in BioCLIP 2</li><li>Three methods beat the starting model at naming and BioCLIP 2 at telling alive from dead, with…</li><li>Could several specialist models share the same first 12 blocks?</li><li>Further training on organism photos raised the share of species photos named correctly from 45…</li><li>Photos are from iNaturalist, cropped to 224 × 224 pixels</li><li>All the methods are contained within these slides</li></ol>
+  <p>This page is a deck of 41 slides titled "From CLIP to BioCLIP 2".</p><p>Each slide is a section with the id slide-N.</p><p>Each slide is followed by its method notes and speaker notes.</p><p>The full page text is about 140,000 characters.</p><p>The notes for slide N are also published at notes/slide-N.txt.</p><p>All notes in one file are published at notes.txt.</p>
+  <ol><li>From CLIP to BioCLIP 2</li><li>The two models are two files of 427,616,513 numbers, laid out the same way</li><li>A photo and a name each become 768 numbers</li><li>Training on organism photos changed the first-layer filters by 20% and the text side’s word ta…</li><li>BioCLIP 2 scores a junco photo’s right name 0.717, up from 0.291, and its four highest wrong n…</li><li>BioCLIP 2 names 90.6% of photos of 223 species correctly, up from the starting model’s 45.5%</li><li>What did BioCLIP 2 get worse at?</li><li>BioCLIP 2 scores 85.7% at telling alive animals from dead ones; the starting model scores 92.1%</li><li>159 photos are labelled alive or dead correctly by the starting model alone, and 59 by BioCLIP…</li><li>Eight photos the starting model labels correctly as alive or dead and BioCLIP 2 labels wrongly</li><li>Eight photos BioCLIP 2 labels correctly as alive or dead and the starting model labels wrongly</li><li>Given ten vehicle names to choose from, BioCLIP 2 calls 83% of motorcycle photos “rocket”</li><li>In BioCLIP 2 the ten vehicle names are less similar to each other: 0.662 on average, down from…</li><li>On bus photos BioCLIP 2 scores the name “streetcar” 0.566, above “bus” at 0.555</li><li>Of the 8 photos each model rates most like a robin photo, BioCLIP 2 picks 7 robins and the sta…</li><li>The 8 photos the starting model rates most like a dead moose are all dead animals; BioCLIP 2’s…</li><li>In BioCLIP 2, 59% of a photo’s most similar photos share its alive-or-dead label, down from 81%</li><li>Averaging the two models’ weights gives 72.7% on species naming and 92.2% at telling alive fro…</li><li>BioCLIP 2 got worse at telling alive from dead and at naming vehicles from words, which fell f…</li><li>Where in the network does BioCLIP 2 get worse at telling alive from dead?</li><li>Every block holds 257 tokens: 256 patch tokens and 1 summary token</li><li>Up to block 16, neither model can name 1 species photo in 10 from its summary token</li><li>Through block 22, BioCLIP 2’s summary token scores higher than the starting model’s at telling…</li><li>Between blocks 22 and 23, BioCLIP 2’s summary token becomes 4.2 points worse at telling alive…</li><li>BioCLIP 2’s patch tokens still tell alive from dead at block 24: 91.0%, against 87.0% from its…</li><li>On this junco photo, BioCLIP 2’s summary token at block 24 takes 89.6% of its attention from a…</li><li>57.7% of block 1’s weight change falls where the starting model’s strongest patterns meet; in…</li><li>Block 23’s weight change needs 514 directions to hold 90% of it, close to the 523 of a random…</li><li>Two-thirds of BioCLIP 2’s fall at telling alive from dead happens at block 23, in its summary…</li><li>Can one model name species like BioCLIP 2 and tell alive from dead like the starting model?</li><li>The starting model with BioCLIP 2’s last 12 blocks copied in names 76.6% of species photos, up…</li><li>BioCLIP 2 with the starting model’s last 12 blocks copied in scores 92.9% at telling alive fro…</li><li>BioCLIP 2 tells alive from dead 4.1 points better with the starting model’s blocks 23 and 24 s…</li><li>Read from its patch tokens, an unchanged BioCLIP 2 tells alive from dead with 89.6% accuracy,…</li><li>Reading the patch tokens makes BioCLIP 2 better at telling alive from dead without lowering it…</li><li>Six measurements placed on the model, from block 1 to where photos meet names</li><li>The word “forgetting” covers three different results in BioCLIP 2</li><li>Three methods beat the starting model at naming and BioCLIP 2 at telling alive from dead, with…</li><li>Could several specialist models share the same first 12 blocks?</li><li>Further training on organism photos raised the share of species photos named correctly from 45…</li><li>Photos are from iNaturalist, cropped to 224 × 224 pixels</li></ol>
 </aside>
 <section class="slide" id="slide-1" aria-labelledby="slide-1-title">
-<div class="frame"><div class="stage" data-slide="cover" data-n="1" data-of="42">
+<div class="frame"><div class="stage" data-slide="cover" data-n="1" data-of="41">
 <p class="eyebrow">ONE MODEL, BEFORE AND AFTER BIOLOGY TRAINING</p>
 <h1 id="slide-1-title">From CLIP to BioCLIP 2</h1>
 <p class="lede">BioCLIP 2 began as a general image–text model and was trained further on 214 million organism photos. It now names species twice as well. Both models have the same layout of 428 million weights, so each weight in one has a partner in the other and the two can be compared directly. Three questions follow: what did BioCLIP 2 get worse at, where in the network does it get worse, and can one model keep the naming without that loss?</p>
@@ -42,7 +42,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-2" aria-labelledby="slide-2-title">
-<div class="frame"><div class="stage" data-slide="question" data-n="2" data-of="42">
+<div class="frame"><div class="stage" data-slide="question" data-n="2" data-of="41">
 <p class="eyebrow">THE TWO MODELS</p>
 <h2 id="slide-2-title">The two models are two files of 427,616,513 numbers, laid out the same way</h2>
 <p class="lede">BioCLIP 2’s authors did not start from random weights. They loaded the LAION-2B CLIP ViT-L/14 weights and kept training them on organism photos. Nothing was added or removed, so each number in one file has a partner in the other.</p>
@@ -62,7 +62,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-3" aria-labelledby="slide-3-title">
-<div class="frame"><div class="stage" data-slide="anatomy" data-n="3" data-of="42">
+<div class="frame"><div class="stage" data-slide="anatomy" data-n="3" data-of="41">
 <p class="eyebrow">HOW THE MODEL READS A PHOTO AND A NAME</p>
 <h2 id="slide-3-title">A photo and a name each become 768 numbers</h2>
 <p class="lede">The model scores a photo against a name by the cosine of the angle between their two lists of numbers (cosine similarity). A small angle means a match.</p>
@@ -91,7 +91,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-4" aria-labelledby="slide-4-title">
-<div class="frame"><div class="stage" data-slide="filters" data-n="4" data-of="42">
+<div class="frame"><div class="stage" data-slide="filters" data-n="4" data-of="41">
 <p class="eyebrow">THE FIRST-LAYER FILTERS, DRAWN AS PICTURES</p>
 <h2 id="slide-4-title">Training on organism photos changed the first-layer filters by 20% and the text side’s word table by 88%</h2>
 <div class="body" style="margin-top:36px; gap:40px">
@@ -110,7 +110,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-5" aria-labelledby="slide-5-title">
-<div class="frame"><div class="stage" data-slide="onephoto" data-n="5" data-of="42">
+<div class="frame"><div class="stage" data-slide="onephoto" data-n="5" data-of="41">
 <p class="eyebrow">ONE PHOTO SCORED AGAINST SPECIES NAMES</p>
 <h2 id="slide-5-title">BioCLIP 2 scores a junco photo’s right name 0.717, up from 0.291, and its four highest wrong names higher too</h2>
 <div class="body" style="margin-top:44px; gap:32px">
@@ -133,7 +133,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-6" aria-labelledby="slide-6-title">
-<div class="frame"><div class="stage" data-slide="naming" data-n="6" data-of="42">
+<div class="frame"><div class="stage" data-slide="naming" data-n="6" data-of="41">
 <p class="eyebrow">WHAT TRAINING IMPROVED</p>
 <h2 id="slide-6-title">BioCLIP 2 names 90.6% of photos of 223 species correctly, up from the starting model’s 45.5%</h2>
 <div class="body" style="margin-top:36px; gap:72px">
@@ -178,7 +178,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-7" aria-labelledby="slide-7-title">
-<div class="frame"><div class="stage" data-slide="qcost" data-n="7" data-of="42">
+<div class="frame"><div class="stage" data-slide="qcost" data-n="7" data-of="41">
 <p class="eyebrow">QUESTION 1</p>
 <h1 id="slide-7-title" style="font-size:96px">What did BioCLIP 2 get worse at?</h1>
 <p class="lede" style="font-size:44px; max-width:1560px; margin-top:40px"><b>A natural guess:</b> only subjects far from biology. Training on organism photos made BioCLIP 2 better at naming species, and it should be no worse at any other question about animals.</p>
@@ -198,7 +198,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-8" aria-labelledby="slide-8-title">
-<div class="frame"><div class="stage" data-slide="dial" data-n="8" data-of="42">
+<div class="frame"><div class="stage" data-slide="dial" data-n="8" data-of="41">
 <p class="eyebrow">QUESTION 1 · ALIVE OR DEAD</p>
 <h2 id="slide-8-title">BioCLIP 2 scores 85.7% at telling alive animals from dead ones; the starting model scores 92.1%</h2>
 <div class="body" style="margin-top:36px; gap:72px">
@@ -244,7 +244,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-9" aria-labelledby="slide-9-title">
-<div class="frame"><div class="stage" data-slide="fourway" data-n="9" data-of="42">
+<div class="frame"><div class="stage" data-slide="fourway" data-n="9" data-of="41">
 <p class="eyebrow">QUESTION 1 · PHOTO BY PHOTO</p>
 <h2 id="slide-9-title">159 photos are labelled alive or dead correctly by the starting model alone, and 59 by BioCLIP 2 alone</h2>
 <div class="body" style="margin-top:36px; flex-direction:column; gap:0">
@@ -268,7 +268,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-10" aria-labelledby="slide-10-title">
-<div class="frame"><div class="stage" data-slide="flipstart" data-n="10" data-of="42">
+<div class="frame"><div class="stage" data-slide="flipstart" data-n="10" data-of="41">
 <p class="eyebrow">QUESTION 1 · PHOTOS BIOCLIP 2 GETS WRONG</p>
 <h2 id="slide-10-title">Eight photos the starting model labels correctly as alive or dead and BioCLIP 2 labels wrongly</h2>
 <div class="body" style="margin-top:36px; gap:56px">
@@ -301,7 +301,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-11" aria-labelledby="slide-11-title">
-<div class="frame"><div class="stage" data-slide="flipbio" data-n="11" data-of="42">
+<div class="frame"><div class="stage" data-slide="flipbio" data-n="11" data-of="41">
 <p class="eyebrow">QUESTION 1 · PHOTOS THE STARTING MODEL GETS WRONG</p>
 <h2 id="slide-11-title">Eight photos BioCLIP 2 labels correctly as alive or dead and the starting model labels wrongly</h2>
 <div class="body" style="margin-top:36px; gap:56px">
@@ -334,7 +334,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-12" aria-labelledby="slide-12-title">
-<div class="frame"><div class="stage" data-slide="confusion" data-n="12" data-of="42">
+<div class="frame"><div class="stage" data-slide="confusion" data-n="12" data-of="41">
 <p class="eyebrow">QUESTION 1 · NAMING VEHICLES</p>
 <h2 id="slide-12-title">Given ten vehicle names to choose from, BioCLIP 2 calls 83% of motorcycle photos “rocket”</h2>
 <div class="body" style="margin-top:36px; gap:72px">
@@ -361,7 +361,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-13" aria-labelledby="slide-13-title">
-<div class="frame"><div class="stage" data-slide="names" data-n="13" data-of="42">
+<div class="frame"><div class="stage" data-slide="names" data-n="13" data-of="41">
 <p class="eyebrow">QUESTION 1 · THE VEHICLE NAMES COMPARED WITH EACH OTHER</p>
 <h2 id="slide-13-title">In BioCLIP 2 the ten vehicle names are less similar to each other: 0.662 on average, down from 0.774</h2>
 <div class="body" style="margin-top:36px; gap:72px">
@@ -386,7 +386,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-14" aria-labelledby="slide-14-title">
-<div class="frame"><div class="stage" data-slide="busscores" data-n="14" data-of="42">
+<div class="frame"><div class="stage" data-slide="busscores" data-n="14" data-of="41">
 <p class="eyebrow">QUESTION 1 · BUS PHOTOS SCORED AGAINST FOUR NAMES</p>
 <h2 id="slide-14-title">On bus photos BioCLIP 2 scores the name “streetcar” 0.566, above “bus” at 0.555</h2>
 <div class="body" style="margin-top:36px; gap:72px">
@@ -412,7 +412,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-15" aria-labelledby="slide-15-title">
-<div class="frame"><div class="stage" data-slide="robin" data-n="15" data-of="42">
+<div class="frame"><div class="stage" data-slide="robin" data-n="15" data-of="41">
 <p class="eyebrow">QUESTION 1 · WHAT EACH MODEL TREATS AS ALIKE</p>
 <h2 id="slide-15-title">Of the 8 photos each model rates most like a robin photo, BioCLIP 2 picks 7 robins and the starting model 1</h2>
 <div class="body" style="margin-top:36px; gap:48px">
@@ -446,7 +446,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-16" aria-labelledby="slide-16-title">
-<div class="frame"><div class="stage" data-slide="moose" data-n="16" data-of="42">
+<div class="frame"><div class="stage" data-slide="moose" data-n="16" data-of="41">
 <p class="eyebrow">QUESTION 1 · WHAT EACH MODEL TREATS AS ALIKE</p>
 <h2 id="slide-16-title">The 8 photos the starting model rates most like a dead moose are all dead animals; BioCLIP 2’s are mostly kangaroos</h2>
 <div class="body" style="margin-top:36px; gap:48px">
@@ -480,7 +480,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-17" aria-labelledby="slide-17-title">
-<div class="frame"><div class="stage" data-slide="neighbours" data-n="17" data-of="42">
+<div class="frame"><div class="stage" data-slide="neighbours" data-n="17" data-of="41">
 <p class="eyebrow">QUESTION 1 · EACH PHOTO’S MOST SIMILAR PHOTOS</p>
 <h2 id="slide-17-title">In BioCLIP 2, 59% of a photo’s most similar photos share its alive-or-dead label, down from 81%</h2>
 <div class="body" style="margin-top:36px; gap:72px">
@@ -527,7 +527,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-18" aria-labelledby="slide-18-title">
-<div class="frame"><div class="stage" data-slide="midmix" data-n="18" data-of="42">
+<div class="frame"><div class="stage" data-slide="midmix" data-n="18" data-of="41">
 <p class="eyebrow">QUESTION 1 · MIXING THE TWO MODELS’ WEIGHTS</p>
 <h2 id="slide-18-title">Averaging the two models’ weights gives 72.7% on species naming and 92.2% at telling alive from dead</h2>
 <div class="body" style="margin-top:36px; gap:72px">
@@ -555,7 +555,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-19" aria-labelledby="slide-19-title">
-<div class="frame"><div class="stage" data-slide="costmeans" data-n="19" data-of="42">
+<div class="frame"><div class="stage" data-slide="costmeans" data-n="19" data-of="41">
 <p class="eyebrow">QUESTION 1 · ANSWER</p>
 <h2 id="slide-19-title">BioCLIP 2 got worse at telling alive from dead and at naming vehicles from words, which fell from 93.0% to 45.8%</h2>
 <p class="lede">Species naming rose from 45.5% to 90.6%. With every weight averaged between the two models, naming is 72.7% and telling alive from dead is no worse than in the starting model.</p>
@@ -574,7 +574,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-20" aria-labelledby="slide-20-title">
-<div class="frame"><div class="stage" data-slide="qwhere" data-n="20" data-of="42">
+<div class="frame"><div class="stage" data-slide="qwhere" data-n="20" data-of="41">
 <p class="eyebrow">QUESTION 2</p>
 <h1 id="slide-20-title" style="font-size:64px">Where in the network does BioCLIP 2 get worse at telling alive from dead?</h1>
 <p class="lede" style="font-size:44px; max-width:1560px; margin-top:40px"><b>A natural guess:</b> a little in every block. Training changed the weights of all 24 image blocks, so BioCLIP 2 should fall a little further behind the starting model at each block, from the first to the last.</p>
@@ -594,7 +594,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-21" aria-labelledby="slide-21-title">
-<div class="frame"><div class="stage" data-slide="tokens" data-n="21" data-of="42">
+<div class="frame"><div class="stage" data-slide="tokens" data-n="21" data-of="41">
 <p class="eyebrow">QUESTION 2 · WHAT A BLOCK HOLDS</p>
 <h2 id="slide-21-title">Every block holds 257 tokens: 256 patch tokens and 1 summary token</h2>
 <div class="body" style="margin-top:36px; gap:72px">
@@ -619,7 +619,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-22" aria-labelledby="slide-22-title">
-<div class="frame"><div class="stage" data-slide="layers" data-n="22" data-of="42">
+<div class="frame"><div class="stage" data-slide="layers" data-n="22" data-of="41">
 <p class="eyebrow">QUESTION 2 · SPECIES NAMING, BLOCK BY BLOCK</p>
 <h2 id="slide-22-title">Up to block 16, neither model can name 1 species photo in 10 from its summary token</h2>
 <div class="body" style="margin-top:36px; gap:72px">
@@ -648,7 +648,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-23" aria-labelledby="slide-23-title">
-<div class="frame"><div class="stage" data-slide="latesummary" data-n="23" data-of="42">
+<div class="frame"><div class="stage" data-slide="latesummary" data-n="23" data-of="41">
 <p class="eyebrow">QUESTION 2 · ALIVE OR DEAD, BLOCK BY BLOCK</p>
 <h2 id="slide-23-title">Through block 22, BioCLIP 2’s summary token scores higher than the starting model’s at telling alive from dead</h2>
 <div class="body" style="margin-top:36px; gap:72px">
@@ -674,7 +674,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-24" aria-labelledby="slide-24-title">
-<div class="frame"><div class="stage" data-slide="blocktwentythree" data-n="24" data-of="42">
+<div class="frame"><div class="stage" data-slide="blocktwentythree" data-n="24" data-of="41">
 <p class="eyebrow">QUESTION 2 · BLOCK 22 TO BLOCK 23</p>
 <h2 id="slide-24-title">Between blocks 22 and 23, BioCLIP 2’s summary token becomes 4.2 points worse at telling alive from dead</h2>
 <div class="body" style="margin-top:36px; gap:72px">
@@ -701,7 +701,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-25" aria-labelledby="slide-25-title">
-<div class="frame"><div class="stage" data-slide="patches" data-n="25" data-of="42">
+<div class="frame"><div class="stage" data-slide="patches" data-n="25" data-of="41">
 <p class="eyebrow">QUESTION 2 · THE PATCH TOKENS</p>
 <h2 id="slide-25-title">BioCLIP 2’s patch tokens still tell alive from dead at block 24: 91.0%, against 87.0% from its summary token</h2>
 <div class="body" style="margin-top:36px; gap:72px">
@@ -727,7 +727,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-26" aria-labelledby="slide-26-title">
-<div class="frame"><div class="stage" data-slide="attention" data-n="26" data-of="42">
+<div class="frame"><div class="stage" data-slide="attention" data-n="26" data-of="41">
 <p class="eyebrow">QUESTION 2 · WHICH PATCHES THE SUMMARY TOKEN DRAWS ON</p>
 <h2 id="slide-26-title">On this junco photo, BioCLIP 2’s summary token at block 24 takes 89.6% of its attention from a quarter of the patches</h2>
 <div class="body" style="margin-top:36px; gap:40px">
@@ -756,7 +756,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-27" aria-labelledby="slide-27-title">
-<div class="frame"><div class="stage" data-slide="dw" data-n="27" data-of="42">
+<div class="frame"><div class="stage" data-slide="dw" data-n="27" data-of="41">
 <p class="eyebrow">QUESTION 2 · THE WEIGHT CHANGE AS A PICTURE</p>
 <h2 id="slide-27-title">57.7% of block 1’s weight change falls where the starting model’s strongest patterns meet; in block 24, 9.04%</h2>
 <div class="body" style="margin-top:36px; gap:64px">
@@ -781,7 +781,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-28" aria-labelledby="slide-28-title">
-<div class="frame"><div class="stage" data-slide="blocks" data-n="28" data-of="42">
+<div class="frame"><div class="stage" data-slide="blocks" data-n="28" data-of="41">
 <p class="eyebrow">QUESTION 2 · WEIGHT CHANGE, ALL 24 BLOCKS</p>
 <h2 id="slide-28-title">Block 23’s weight change needs 514 directions to hold 90% of it, close to the 523 of a random change</h2>
 <div class="body" style="margin-top:36px; gap:72px">
@@ -810,7 +810,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-29" aria-labelledby="slide-29-title">
-<div class="frame"><div class="stage" data-slide="wheremeans" data-n="29" data-of="42">
+<div class="frame"><div class="stage" data-slide="wheremeans" data-n="29" data-of="41">
 <p class="eyebrow">QUESTION 2 · ANSWER</p>
 <h2 id="slide-29-title">Two-thirds of BioCLIP 2’s fall at telling alive from dead happens at block 23, in its summary token</h2>
 <p class="lede">On all eight photos checked, BioCLIP 2’s summary token at block 24 takes a larger share of its attention from its 64 most-attended patches: 89.6% against 73.4% on the junco photo.</p>
@@ -829,7 +829,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-30" aria-labelledby="slide-30-title">
-<div class="frame"><div class="stage" data-slide="qkeep" data-n="30" data-of="42">
+<div class="frame"><div class="stage" data-slide="qkeep" data-n="30" data-of="41">
 <p class="eyebrow">QUESTION 3</p>
 <h1 id="slide-30-title" style="font-size:64px">Can one model name species like BioCLIP 2 and tell alive from dead like the starting model?</h1>
 <p class="lede" style="font-size:44px; max-width:1560px; margin-top:40px"><b>A natural guess:</b> only by training BioCLIP 2 again with telling alive from dead added as a goal, because the same weights produce both scores.</p>
@@ -849,7 +849,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-31" aria-labelledby="slide-31-title">
-<div class="frame"><div class="stage" data-slide="swap" data-n="31" data-of="42">
+<div class="frame"><div class="stage" data-slide="swap" data-n="31" data-of="41">
 <p class="eyebrow">QUESTION 3 · SWAPPING BLOCKS</p>
 <h2 id="slide-31-title">The starting model with BioCLIP 2’s last 12 blocks copied in names 76.6% of species photos, up from 43%</h2>
 <div class="body" style="margin-top:36px; gap:72px">
@@ -878,7 +878,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-32" aria-labelledby="slide-32-title">
-<div class="frame"><div class="stage" data-slide="reverse" data-n="32" data-of="42">
+<div class="frame"><div class="stage" data-slide="reverse" data-n="32" data-of="41">
 <p class="eyebrow">QUESTION 3 · BIOCLIP 2 WITH STARTING-MODEL BLOCKS</p>
 <h2 id="slide-32-title">BioCLIP 2 with the starting model’s last 12 blocks copied in scores 92.9% at telling alive from dead</h2>
 <div class="body" style="margin-top:36px; gap:72px">
@@ -904,7 +904,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-33" aria-labelledby="slide-33-title">
-<div class="frame"><div class="stage" data-slide="twoblocks" data-n="33" data-of="42">
+<div class="frame"><div class="stage" data-slide="twoblocks" data-n="33" data-of="41">
 <p class="eyebrow">QUESTION 3 · SWAPPING BLOCKS 23 AND 24</p>
 <h2 id="slide-33-title">BioCLIP 2 tells alive from dead 4.1 points better with the starting model’s blocks 23 and 24 swapped in</h2>
 <div class="body" style="margin-top:30px; flex-direction:column; gap:6px">
@@ -928,7 +928,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-34" aria-labelledby="slide-34-title">
-<div class="frame"><div class="stage" data-slide="patchroute" data-n="34" data-of="42">
+<div class="frame"><div class="stage" data-slide="patchroute" data-n="34" data-of="41">
 <p class="eyebrow">QUESTION 3 · READING THE PATCH TOKENS</p>
 <h2 id="slide-34-title">Read from its patch tokens, an unchanged BioCLIP 2 tells alive from dead with 89.6% accuracy, up from 85.7%</h2>
 <div class="body" style="margin-top:36px; gap:72px">
@@ -954,7 +954,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-35" aria-labelledby="slide-35-title">
-<div class="frame"><div class="stage" data-slide="trade" data-n="35" data-of="42">
+<div class="frame"><div class="stage" data-slide="trade" data-n="35" data-of="41">
 <p class="eyebrow">QUESTION 3 · ALL THE VARIANTS COMPARED</p>
 <h2 id="slide-35-title">Reading the patch tokens makes BioCLIP 2 better at telling alive from dead without lowering its naming</h2>
 <div class="body" style="margin-top:36px; gap:72px">
@@ -979,7 +979,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-36" aria-labelledby="slide-36-title">
-<div class="frame"><div class="stage" data-slide="wholemodel" data-n="36" data-of="42">
+<div class="frame"><div class="stage" data-slide="wholemodel" data-n="36" data-of="41">
 <p class="eyebrow">LOOKING BACK · THE WHOLE MODEL</p>
 <h2 id="slide-36-title">Six measurements placed on the model, from block 1 to where photos meet names</h2>
 <div class="body" style="margin-top:32px">
@@ -1029,7 +1029,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-37" aria-labelledby="slide-37-title">
-<div class="frame"><div class="stage" data-slide="forgetting" data-n="37" data-of="42">
+<div class="frame"><div class="stage" data-slide="forgetting" data-n="37" data-of="41">
 <p class="eyebrow">LOOKING BACK · FORGETTING</p>
 <h2 id="slide-37-title">The word “forgetting” covers three different results in BioCLIP 2</h2>
 <p class="lede" style="font-size:28px; max-width:1664px; margin-top:16px">A model trained further on new data usually gets worse at things it could do before; researchers call this catastrophic forgetting. In BioCLIP 2 the scores fell in three different ways.</p>
@@ -1049,7 +1049,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-38" aria-labelledby="slide-38-title">
-<div class="frame"><div class="stage" data-slide="keepboth" data-n="38" data-of="42">
+<div class="frame"><div class="stage" data-slide="keepboth" data-n="38" data-of="41">
 <p class="eyebrow">LOOKING BACK · KEEPING BOTH SKILLS</p>
 <h2 id="slide-38-title">Three methods beat the starting model at naming and BioCLIP 2 at telling alive from dead, with no retraining</h2>
 <div class="body" style="margin-top:30px; flex-direction:column; gap:0">
@@ -1074,7 +1074,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-39" aria-labelledby="slide-39-title">
-<div class="frame"><div class="stage" data-slide="generalists" data-n="39" data-of="42">
+<div class="frame"><div class="stage" data-slide="generalists" data-n="39" data-of="41">
 <p class="eyebrow">LOOKING AHEAD</p>
 <h2 id="slide-39-title">Could several specialist models share the same first 12 blocks?</h2>
 <div class="body" style="margin-top:40px; gap:72px">
@@ -1116,7 +1116,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-40" aria-labelledby="slide-40-title">
-<div class="frame"><div class="stage" data-slide="close" data-n="40" data-of="42">
+<div class="frame"><div class="stage" data-slide="close" data-n="40" data-of="41">
 <p class="eyebrow">TO TAKE AWAY</p>
 <h2 id="slide-40-title" class="clsay">Further training on organism photos raised the share of species photos named correctly from 45.5% to 90.6%.</h2>
 <p class="clsay" style="margin-top:40px">Much of what looked forgotten was still inside BioCLIP 2: it still tells vehicles apart from example photos (86.7%), and its patch tokens still tell alive animals from dead ones (89.6%).</p>
@@ -1133,7 +1133,7 @@
 </aside>
 </section>
 <section class="slide" id="slide-41" aria-labelledby="slide-41-title">
-<div class="frame"><div class="stage" data-slide="credits" data-n="41" data-of="42">
+<div class="frame"><div class="stage" data-slide="credits" data-n="41" data-of="41">
 <p class="eyebrow">PHOTO CREDITS</p>
 <h2 id="slide-41-title">Photos are from iNaturalist, cropped to 224 × 224 pixels</h2>
 <div class="body" style="margin-top:40px; gap:48px">
@@ -1148,20 +1148,6 @@
   <dl><dt>What was measured</dt><dd>The slide lists photo credits and reports no measurement.</dd><dt>Data</dt><dd>All photos are from iNaturalist and are cropped to 224 by 224 pixels.</dd><dd>The crop that the models apply to their input is the only change to each photo.</dd><dd>The slide credits 45 photographers under CC BY-NC 4.0 and 4 under CC BY 4.0.</dd><dd>One photo, of an American Red Squirrel, is CC0 with no rights reserved.</dd><dd>Each CC BY and CC BY-NC photo remains the copyright of its photographer.</dd><dd>Credits cover the one-photo slide, the two similar-photo slides and the attention slide.</dd><dd>Credits also cover the sixteen photos on the two slides of disagreements.</dd><dd>The junco on the attention slide is the same photo as on the one-photo slide.</dd></dl>
   <h4>Speaker notes: slide 41</h4>
   <p>Credits cover the one-photo slide, the two nearest-photo slides, the sixteen photos on the two slides of photos only one model labels correctly and the junco on the attention slide, which is the same photo as on the one-photo slide.</p>
-</aside>
-</section>
-<section class="slide" id="slide-42" aria-labelledby="slide-42-title">
-<div class="frame"><div class="stage" data-slide="ask" data-n="42" data-of="42">
-<div class="spacer"></div>
-<h1 id="slide-42-title" style="font-size:96px">All the methods are contained within these slides</h1>
-<p class="lede" style="font-size:48px; max-width:1500px; margin-top:44px">Give your agent this URL to discuss them or ask questions.</p>
-<p class="big bio" style="font-size:56px; letter-spacing:-0.01em; margin-top:56px">andrewxhill.com/from-clip-to-bioclip-2</p>
-<div class="spacer"></div>
-</div></div>
-<aside class="slide-notes" aria-hidden="true">
-  <h3>Method notes: slide 42, All the methods are contained within these slides</h3>
-  <p>The slide says the methods are in the slides and gives the page address.</p>
-  <dl><dt>Where the methods are</dt><dd>Each slide on this page is followed by its method notes.</dd><dd>The notes for slide N are also published at notes/slide-N.txt.</dd><dd>All notes in one file are published at notes.txt.</dd></dl>
 </aside>
 </section>
 </main>
@@ -1265,6 +1251,34 @@
       'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + path + '"/></svg>';
     return el;
   }
+  var info = icon(d.createElement('button'), 'About these slides', 'M12 10.5v8M12 5.5v1');
+  info.setAttribute('aria-expanded', 'false');
+  nav.appendChild(info);
+  var tip = d.createElement('div'), here = location.host + location.pathname.replace(/\/$/, '');
+  tip.className = 'tip';
+  tip.hidden = true;
+  tip.setAttribute('role', 'dialog');
+  tip.setAttribute('aria-label', 'About these slides');
+  tip.innerHTML = '<p>All the methods are contained within these slides.</p>' +
+    '<p>Give your agent this URL to discuss them or ask questions.</p><p class="url"></p>' +
+    '<button type="button">Copy link</button>';
+  tip.querySelector('.url').textContent = here;
+  var copy = tip.querySelector('button');
+  copy.addEventListener('click', function () {
+    var url = location.origin + location.pathname;
+    function done() { copy.textContent = 'Copied'; setTimeout(function () { copy.textContent = 'Copy link'; }, 1600); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, function () {});
+  });
+  d.body.appendChild(tip);
+  function showTip(on) {
+    tip.hidden = !on;
+    info.setAttribute('aria-expanded', on ? 'true' : 'false');
+  }
+  info.addEventListener('click', function (e) { e.stopPropagation(); showTip(tip.hidden); });
+  tip.addEventListener('click', function (e) { e.stopPropagation(); });
+  d.addEventListener('click', function () { if (!tip.hidden) showTip(false); });
+  d.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !tip.hidden) { showTip(false); info.focus(); } });
+
   var menu = icon(d.createElement('button'), 'All slides', 'M5 7h14M5 12h14M5 17h14');
   menu.setAttribute('aria-expanded', 'false');
   nav.appendChild(menu);
