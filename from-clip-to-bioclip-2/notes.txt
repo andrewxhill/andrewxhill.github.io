@@ -2056,3 +2056,18 @@ The slide credits the iNaturalist photographers and states the photo licences.
 **Speaker notes**
 
 Credits cover the one-photo slide, the two nearest-photo slides, the sixteen photos on the two slides of photos only one model labels correctly and the junco on the attention slide, which is the same photo as on the one-photo slide.
+
+## Slide 42: All the methods are contained within these slides
+
+Give your agent this URL to discuss them or ask questions.
+
+andrewxhill.com/from-clip-to-bioclip-2
+
+**Method notes**
+
+The slide says the methods are in the slides and gives the page address.
+
+- Where the methods are
+  - Each slide on this page is followed by its method notes.
+  - The notes for slide N are also published at notes/slide-N.txt.
+  - All notes in one file are published at notes.txt.
