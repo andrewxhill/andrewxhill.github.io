@@ -35,7 +35,30 @@ html { scroll-snap-type: y proximity; }
 .nav button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .nav button:disabled { background: rgba(64, 64, 64, .12); cursor: default; }
 .nav svg { display: block; }
-@media print { .nav { display: none; } }
+@media print { .nav, .rail, .rail-shade { display: none; } }
+
+/* slide column: opens from the left */
+.rail-shade { position: fixed; inset: 0; z-index: 8; background: rgba(64, 64, 64, .18); opacity: 0;
+  pointer-events: none; transition: opacity 180ms; }
+.rail { position: fixed; left: 0; top: 0; bottom: 0; z-index: 9; width: 272px; box-sizing: border-box;
+  padding: 12px 12px 24px; overflow-y: auto; overscroll-behavior: contain; background: #fff;
+  border-right: 1px solid var(--grid); box-shadow: 0 0 24px rgba(0, 0, 0, .12);
+  transform: translateX(-102%); visibility: hidden; transition: transform 180ms, visibility 180ms; }
+.rail-open .rail { transform: none; visibility: visible; }
+.rail-open .rail-shade { opacity: 1; pointer-events: auto; }
+.rail button { display: flex; align-items: flex-start; gap: 10px; width: 100%; margin: 0 0 4px; padding: 6px;
+  border: 0; border-radius: 6px; background: none; cursor: pointer; text-align: left;
+  font: 600 12px/1.2 'Open Sans', sans-serif; color: var(--muted); font-variant-numeric: tabular-nums; }
+.rail button:hover, .rail button:focus-visible { background: #f5f8f9; }
+.rail button:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.rail .no { width: 22px; flex: none; text-align: right; padding-top: 2px; }
+.rail .thumb { width: 200px; height: 112.5px; flex: none; overflow: hidden; border: 1px solid var(--grid);
+  border-radius: 4px; background: #fff; pointer-events: none; }
+.rail .thumb .stage { transform: scale(.1041667); }
+.rail .thumb .stage::after { content: none; }
+.rail button[aria-current] .thumb { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+.rail button[aria-current] .no { color: var(--accent); }
+@media (prefers-reduced-motion: reduce) { .rail, .rail-shade { transition: none; } }
 
 /* stage: the fixed 1920 x 1080 canvas each slide was authored for */
 .stage { position: relative; width: 1920px; height: 1080px; overflow: hidden;

@@ -13,7 +13,7 @@
 <meta property="og:type" content="article">
 <link rel="alternate" type="text/plain" href="notes.txt" title="Method notes for each slide">
 <link rel="stylesheet" href="fonts.css">
-<link rel="stylesheet" href="slides.css?v=83b4e501">
+<link rel="stylesheet" href="slides.css?v=7ae2dbb9">
 </head>
 <body>
 <main id="deck">
@@ -1258,12 +1258,18 @@
   var nav = d.createElement('nav'), btn = [];
   nav.className = 'nav';
   nav.setAttribute('aria-label', 'Slides');
-  [[-1, 'Previous slide', 'M15 5l-7 7 7 7'], [1, 'Next slide', 'M9 5l7 7-7 7']].forEach(function (b) {
-    var el = d.createElement('button');
+  function icon(el, label, path) {
     el.type = 'button';
-    el.setAttribute('aria-label', b[1]);
+    el.setAttribute('aria-label', label);
     el.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" ' +
-      'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + b[2] + '"/></svg>';
+      'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + path + '"/></svg>';
+    return el;
+  }
+  var menu = icon(d.createElement('button'), 'All slides', 'M5 7h14M5 12h14M5 17h14');
+  menu.setAttribute('aria-expanded', 'false');
+  nav.appendChild(menu);
+  [[-1, 'Previous slide', 'M15 5l-7 7 7 7'], [1, 'Next slide', 'M9 5l7 7-7 7']].forEach(function (b) {
+    var el = icon(d.createElement('button'), b[1], b[2]);
     el.addEventListener('click', function () {
       var n = (pending !== null ? pending : current()) + b[0];
       if (n >= 0 && n < slides.length) { go(n); marks(n); }
@@ -1272,6 +1278,56 @@
     nav.appendChild(el);
   });
   d.body.appendChild(nav);
+
+  var rail = d.createElement('nav'), shade = d.createElement('div'), items = [];
+  rail.className = 'rail';
+  rail.setAttribute('aria-label', 'All slides');
+  shade.className = 'rail-shade';
+  d.body.appendChild(shade);
+  d.body.appendChild(rail);
+  function fillRail() {
+    slides.forEach(function (s, i) {
+      var b = d.createElement('button'), no = d.createElement('span'), th = d.createElement('span');
+      var copy = s.querySelector('.stage').cloneNode(true);
+      [].forEach.call(copy.querySelectorAll('[id]'), function (el) {
+        if (!(el instanceof SVGElement)) el.removeAttribute('id');
+      });
+      copy.setAttribute('aria-hidden', 'true');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Slide ' + (i + 1));
+      no.className = 'no';
+      no.textContent = i + 1;
+      th.className = 'thumb';
+      th.appendChild(copy);
+      b.appendChild(no);
+      b.appendChild(th);
+      b.addEventListener('click', function () { closeRail(); go(i, true); marks(i); });
+      items.push(b);
+      rail.appendChild(b);
+    });
+  }
+  function openRail() {
+    if (!items.length) fillRail();
+    var i = pending !== null ? pending : current();
+    items.forEach(function (b, n) {
+      if (n === i) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current');
+    });
+    root.classList.add('rail-open');
+    menu.setAttribute('aria-expanded', 'true');
+    items[i].scrollIntoView({ block: 'center' });
+    items[i].focus({ preventScroll: true });
+  }
+  function closeRail() {
+    root.classList.remove('rail-open');
+    menu.setAttribute('aria-expanded', 'false');
+  }
+  menu.addEventListener('click', function () {
+    if (root.classList.contains('rail-open')) closeRail(); else openRail();
+  });
+  shade.addEventListener('click', closeRail);
+  d.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && root.classList.contains('rail-open')) { closeRail(); menu.focus(); }
+  });
   function marks(i) {
     btn[0].disabled = i <= 0;
     btn[1].disabled = i >= slides.length - 1;
@@ -1281,7 +1337,9 @@
   d.addEventListener('keydown', function (e) {
     if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey) return;
     var t = e.target;
-    if (t && (/^(INPUT|TEXTAREA|SELECT|BUTTON)$/.test(t.tagName) || t.isContentEditable)) return;
+    if (root.classList.contains('rail-open')) return;
+    if (t && (/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName) || t.isContentEditable)) return;
+    if (t && t.tagName === 'BUTTON' && e.key === ' ') return;
     var k = e.key, dir = 0;
     if (k === 'ArrowDown' || k === 'ArrowRight' || k === 'PageDown' || (k === ' ' && !e.shiftKey)) dir = 1;
     else if (k === 'ArrowUp' || k === 'ArrowLeft' || k === 'PageUp' || (k === ' ' && e.shiftKey)) dir = -1;
