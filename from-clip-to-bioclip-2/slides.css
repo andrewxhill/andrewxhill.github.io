@@ -6,7 +6,15 @@
 }
 body { margin: 0; background: var(--bg); color: var(--ink);
   font: 15px/1.6 'Open Sans', 'Helvetica Neue', Arial, sans-serif; }
-.slide { position: relative; border-bottom: 1px solid var(--grid); }
+.slide { position: relative; box-sizing: border-box; border-bottom: 1px solid var(--grid); scroll-snap-align: start; }
+html { scroll-snap-type: y proximity; }
+/* on a landscape screen each slide takes the whole window and the page moves one slide at a time */
+@media (min-aspect-ratio: 1/1) {
+  html { scroll-snap-type: y mandatory; }
+  .slide { min-height: 100vh; min-height: 100svh; display: flex; align-items: center; }
+  .credits { scroll-snap-align: start; }
+}
+@media print { html { scroll-snap-type: none; } .slide { min-height: 0; display: block; } }
 .frame { width: calc(1920px * var(--scale)); height: calc(1080px * var(--scale)); margin: 0 auto;
   overflow: hidden; background: #fff; }
 .slide-notes { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
@@ -26,6 +34,9 @@ body { margin: 0; background: var(--bg); color: var(--ink);
 .stage * { margin: 0; }
 .stage img, .stage svg { display: block; }
 .stage b { font-weight: 700; }
+.stage::after { content: attr(data-n) " / " attr(data-of); position: absolute; right: 128px; bottom: 14px;
+  font: 600 24px/1.25 'Open Sans', sans-serif; letter-spacing: .04em; color: #8a8a8a;
+  font-variant-numeric: tabular-nums; }
 
 /* slide styles, scoped to the stage */
 .stage { font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; color: #404040; }
