@@ -26,6 +26,17 @@ html { scroll-snap-type: y proximity; }
 .credits li { margin: 0 0 2px; }
 .credits a { color: inherit; text-underline-offset: 2px; }
 
+/* back and forward buttons, lower right */
+.nav { position: fixed; right: 16px; bottom: 16px; z-index: 5; display: flex; gap: 8px; }
+.nav button { width: 44px; height: 44px; padding: 0; border: 0; border-radius: 22px; cursor: pointer;
+  background: rgba(64, 64, 64, .32); display: flex; align-items: center; justify-content: center;
+  transition: background 150ms; -webkit-tap-highlight-color: transparent; }
+.nav button:hover, .nav button:focus-visible { background: rgba(64, 64, 64, .75); }
+.nav button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.nav button:disabled { background: rgba(64, 64, 64, .12); cursor: default; }
+.nav svg { display: block; }
+@media print { .nav { display: none; } }
+
 /* stage: the fixed 1920 x 1080 canvas each slide was authored for */
 .stage { position: relative; width: 1920px; height: 1080px; overflow: hidden;
   transform-origin: top left; transform: scale(var(--scale)); text-align: left;
@@ -34,7 +45,7 @@ html { scroll-snap-type: y proximity; }
 .stage * { margin: 0; }
 .stage img, .stage svg { display: block; }
 .stage b { font-weight: 700; }
-.stage::after { content: attr(data-n) " / " attr(data-of); position: absolute; right: 128px; bottom: 14px;
+.stage::after { content: attr(data-n) " / " attr(data-of); position: absolute; left: 128px; bottom: 14px;
   font: 600 24px/1.25 'Open Sans', sans-serif; letter-spacing: .04em; color: #8a8a8a;
   font-variant-numeric: tabular-nums; }
 

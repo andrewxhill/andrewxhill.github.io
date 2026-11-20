@@ -1255,6 +1255,29 @@
     if (m && slides[m[1] - 1]) go(m[1] - 1, jump);
   }
 
+  var nav = d.createElement('nav'), btn = [];
+  nav.className = 'nav';
+  nav.setAttribute('aria-label', 'Slides');
+  [[-1, 'Previous slide', 'M15 5l-7 7 7 7'], [1, 'Next slide', 'M9 5l7 7-7 7']].forEach(function (b) {
+    var el = d.createElement('button');
+    el.type = 'button';
+    el.setAttribute('aria-label', b[1]);
+    el.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" ' +
+      'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + b[2] + '"/></svg>';
+    el.addEventListener('click', function () {
+      var n = (pending !== null ? pending : current()) + b[0];
+      if (n >= 0 && n < slides.length) { go(n); marks(n); }
+    });
+    btn.push(el);
+    nav.appendChild(el);
+  });
+  d.body.appendChild(nav);
+  function marks(i) {
+    btn[0].disabled = i <= 0;
+    btn[1].disabled = i >= slides.length - 1;
+  }
+  window.addEventListener('scroll', function () { marks(pending !== null ? pending : current()); }, { passive: true });
+
   d.addEventListener('keydown', function (e) {
     if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey) return;
     var t = e.target;
@@ -1294,6 +1317,7 @@
   lastW = root.clientWidth;
   fit();
   fromHash(true);
+  marks(pending !== null ? pending : current());
   window.addEventListener('load', function () { fit(); if (window.scrollY === 0) fromHash(true); });
 })();
 </script>
