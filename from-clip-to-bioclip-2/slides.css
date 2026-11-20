@@ -36,6 +36,8 @@ html { scroll-snap-type: y proximity; }
 .nav button:disabled { background: rgba(64, 64, 64, .12); cursor: default; }
 .nav svg { display: block; }
 @media print { .nav, .rail, .rail-shade, .tip { display: none; } }
+.shot .nav, .shot .rail, .shot .rail-shade, .shot .tip { display: none; }
+.shot .stage::after { content: none; }
 
 /* note opened by the information button */
 .tip { position: fixed; right: 16px; bottom: 72px; z-index: 6; box-sizing: border-box; width: 320px;
